@@ -8,7 +8,7 @@ namespace Assignment__Zoo_Management_System_
 {
     public class Class
     {
-        public enum ClassType
+        public enum Type
         {
             Mammal,
             Bird,

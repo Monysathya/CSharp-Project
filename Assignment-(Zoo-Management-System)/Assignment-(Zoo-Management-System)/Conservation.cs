@@ -7,14 +7,15 @@ using System.ComponentModel;
 
 namespace Assignment__Zoo_Management_System_
 {
-    public class Cage
+    public class Conservation
     {
-        public enum Type
+        public enum Status
         {
-            Metal,
-            Wood,
-            Aqurium,
-            Free_Lane
+            Endanger,
+            Some_Endangered,
+            Treatened,
+            Some_Treatened,
+            Stable
         }
     }
 }

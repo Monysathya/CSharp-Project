@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Assignment__Zoo_Management_System_
 {
-    public class Gender_
+    public class Gender
     {
-        public enum Gender
+        public enum _Gender
         {
             Male,
             Female

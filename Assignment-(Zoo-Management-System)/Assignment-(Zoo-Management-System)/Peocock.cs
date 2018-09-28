@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment__Zoo_Management_System_
 {
-    class Elephant : Animal
+    class Peocock : Animal
     {
         public override Conservation.Status ConservationStatus
         {
@@ -20,7 +20,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get
             {
-                return "Elephant";
+                return "Peacock";
             }
         }
 
@@ -28,7 +28,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get
             {
-                return Class.Type.Mammal;
+                return Class.Type.Bird;
             }
         }
     }

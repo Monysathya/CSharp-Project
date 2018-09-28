@@ -14,10 +14,11 @@ namespace Assignment__Zoo_Management_System_
         private string name;
         private int age;
         private double weight;
-        private Cage.CageType cageType;
+        private Cage.Type cageType;
         private CareTaker careTaker;
-        private Gender_.Gender gender;
+        private Gender._Gender gender;
         private string typeOfFood;
+        private MyRegion.From region;
         /* End of Field */
 
         /* Property */
@@ -31,7 +32,7 @@ namespace Assignment__Zoo_Management_System_
             get { return this.name; }
             set { this.name = value; }
         }
-        public Gender_.Gender Gender
+        public Gender._Gender Gender
         {
             get { return this.gender; }
             set { this.gender = value; }
@@ -46,7 +47,7 @@ namespace Assignment__Zoo_Management_System_
             get { return this.weight; }
             set { this.weight = value; }
         }
-        public Cage.CageType CageType
+        public Cage.Type CageType
         {
             get { return this.cageType; }
             set { this.cageType = value; }
@@ -69,8 +70,13 @@ namespace Assignment__Zoo_Management_System_
         {
             get { return this.CareTaker.Name; }
         }
+        public MyRegion.From _Region
+        {
+            get { return this.region; }
+            set { this.region = value; }
+        }
         /* Abstract method */
-        public abstract string _Class
+        public abstract Class.Type _Class
         {
             get;
         }
@@ -78,12 +84,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get;
         }
-
-        public abstract bool canFly
-        {
-            get;
-        }
-        public abstract bool isDangerous
+        public abstract Conservation.Status ConservationStatus
         {
             get;
         }

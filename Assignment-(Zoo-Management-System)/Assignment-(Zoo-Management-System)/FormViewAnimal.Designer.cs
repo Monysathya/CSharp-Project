@@ -31,19 +31,19 @@
             this.dgvViewAllAnimals = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDetail = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.lblSpecie = new System.Windows.Forms.Label();
-            this.lblTypeOfFood = new System.Windows.Forms.Label();
-            this.lblIsDanger = new System.Windows.Forms.Label();
+            this.lblConservationStatus = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lblCanFly = new System.Windows.Forms.Label();
+            this.lblRegion = new System.Windows.Forms.Label();
+            this.lblTypeOfFood = new System.Windows.Forms.Label();
+            this.lblSpecie = new System.Windows.Forms.Label();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAnimals)).BeginInit();
             this.gbDetail.SuspendLayout();
             this.SuspendLayout();
@@ -69,9 +69,9 @@
             // 
             // gbDetail
             // 
-            this.gbDetail.Controls.Add(this.lblCanFly);
+            this.gbDetail.Controls.Add(this.lblConservationStatus);
             this.gbDetail.Controls.Add(this.label6);
-            this.gbDetail.Controls.Add(this.lblIsDanger);
+            this.gbDetail.Controls.Add(this.lblRegion);
             this.gbDetail.Controls.Add(this.lblTypeOfFood);
             this.gbDetail.Controls.Add(this.lblSpecie);
             this.gbDetail.Controls.Add(this.lblClass);
@@ -90,59 +90,59 @@
             this.gbDetail.TabStop = false;
             this.gbDetail.Text = "More Detail";
             // 
-            // label2
+            // lblConservationStatus
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Class: ";
+            this.lblConservationStatus.AutoSize = true;
+            this.lblConservationStatus.Location = new System.Drawing.Point(224, 212);
+            this.lblConservationStatus.Name = "lblConservationStatus";
+            this.lblConservationStatus.Size = new System.Drawing.Size(33, 25);
+            this.lblConservationStatus.TabIndex = 13;
+            this.lblConservationStatus.Text = "---";
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Species: ";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Conservation Status: ";
             // 
-            // label4
+            // lblRegion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Type of food: ";
+            this.lblRegion.AutoSize = true;
+            this.lblRegion.Location = new System.Drawing.Point(224, 169);
+            this.lblRegion.Name = "lblRegion";
+            this.lblRegion.Size = new System.Drawing.Size(33, 25);
+            this.lblRegion.TabIndex = 11;
+            this.lblRegion.Text = "---";
             // 
-            // label5
+            // lblTypeOfFood
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Is Dangerous: ";
+            this.lblTypeOfFood.AutoSize = true;
+            this.lblTypeOfFood.Location = new System.Drawing.Point(224, 126);
+            this.lblTypeOfFood.Name = "lblTypeOfFood";
+            this.lblTypeOfFood.Size = new System.Drawing.Size(33, 25);
+            this.lblTypeOfFood.TabIndex = 10;
+            this.lblTypeOfFood.Text = "---";
             // 
-            // btnAdd
+            // lblSpecie
             // 
-            this.btnAdd.Location = new System.Drawing.Point(795, 202);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(238, 35);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add new animal";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.lblSpecie.AutoSize = true;
+            this.lblSpecie.Location = new System.Drawing.Point(224, 83);
+            this.lblSpecie.Name = "lblSpecie";
+            this.lblSpecie.Size = new System.Drawing.Size(33, 25);
+            this.lblSpecie.TabIndex = 9;
+            this.lblSpecie.Text = "---";
             // 
-            // btnUpdate
+            // lblClass
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(795, 29);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(238, 35);
-            this.btnUpdate.TabIndex = 5;
-            this.btnUpdate.Text = "Update information";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.lblClass.AutoSize = true;
+            this.lblClass.Location = new System.Drawing.Point(224, 40);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(33, 25);
+            this.lblClass.TabIndex = 8;
+            this.lblClass.Text = "---";
             // 
             // btnDelete
             // 
@@ -153,59 +153,59 @@
             this.btnDelete.Text = "Delete Information";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // lblClass
+            // btnUpdate
             // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Location = new System.Drawing.Point(81, 40);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(33, 25);
-            this.lblClass.TabIndex = 8;
-            this.lblClass.Text = "---";
+            this.btnUpdate.Location = new System.Drawing.Point(795, 29);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(238, 35);
+            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.Text = "Update information";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // lblSpecie
+            // btnAdd
             // 
-            this.lblSpecie.AutoSize = true;
-            this.lblSpecie.Location = new System.Drawing.Point(96, 83);
-            this.lblSpecie.Name = "lblSpecie";
-            this.lblSpecie.Size = new System.Drawing.Size(33, 25);
-            this.lblSpecie.TabIndex = 9;
-            this.lblSpecie.Text = "---";
+            this.btnAdd.Location = new System.Drawing.Point(795, 202);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(238, 35);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add new animal";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // lblTypeOfFood
+            // label5
             // 
-            this.lblTypeOfFood.AutoSize = true;
-            this.lblTypeOfFood.Location = new System.Drawing.Point(144, 126);
-            this.lblTypeOfFood.Name = "lblTypeOfFood";
-            this.lblTypeOfFood.Size = new System.Drawing.Size(33, 25);
-            this.lblTypeOfFood.TabIndex = 10;
-            this.lblTypeOfFood.Text = "---";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 169);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Region: ";
             // 
-            // lblIsDanger
+            // label4
             // 
-            this.lblIsDanger.AutoSize = true;
-            this.lblIsDanger.Location = new System.Drawing.Point(151, 169);
-            this.lblIsDanger.Name = "lblIsDanger";
-            this.lblIsDanger.Size = new System.Drawing.Size(33, 25);
-            this.lblIsDanger.TabIndex = 11;
-            this.lblIsDanger.Text = "---";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Type of food: ";
             // 
-            // label6
+            // label3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 212);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 25);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Can Fly: ";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Species: ";
             // 
-            // lblCanFly
+            // label2
             // 
-            this.lblCanFly.AutoSize = true;
-            this.lblCanFly.Location = new System.Drawing.Point(103, 212);
-            this.lblCanFly.Name = "lblCanFly";
-            this.lblCanFly.Size = new System.Drawing.Size(33, 25);
-            this.lblCanFly.TabIndex = 13;
-            this.lblCanFly.Text = "---";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Class: ";
             // 
             // FormViewAnimal
             // 
@@ -238,10 +238,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblIsDanger;
+        private System.Windows.Forms.Label lblRegion;
         private System.Windows.Forms.Label lblTypeOfFood;
         private System.Windows.Forms.Label lblSpecie;
-        private System.Windows.Forms.Label lblCanFly;
+        private System.Windows.Forms.Label lblConservationStatus;
         private System.Windows.Forms.Label label6;
     }
 }

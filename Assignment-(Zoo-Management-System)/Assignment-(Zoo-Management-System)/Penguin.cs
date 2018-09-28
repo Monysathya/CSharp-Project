@@ -8,19 +8,11 @@ namespace Assignment__Zoo_Management_System_
 {
     class Penguin : Animal
     {
-        public override bool canFly
+        public override Conservation.Status ConservationStatus
         {
             get
             {
-                return false;
-            }
-        }
-
-        public override bool isDangerous
-        {
-            get
-            {
-                return false;
+                return Conservation.Status.Endanger;
             }
         }
 
@@ -32,11 +24,11 @@ namespace Assignment__Zoo_Management_System_
             }
         }
 
-        public override string _Class
+        public override Class.Type _Class
         {
             get
             {
-                return Class.ClassType.Bird.ToString();
+                return Class.Type.Bird;
             }
         }
     }

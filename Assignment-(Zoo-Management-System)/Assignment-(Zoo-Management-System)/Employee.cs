@@ -12,7 +12,7 @@ namespace Assignment__Zoo_Management_System_
         private string id;
         private string name;
         private int age;
-        private Gender_.Gender gender;
+        private Gender._Gender gender;
         private string workDate;
         /* End of Field */
 
@@ -36,7 +36,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get;
         }
-        public Gender_.Gender Gender
+        public Gender._Gender Gender
         {
             get { return this.gender; }
             set { this.gender = value; }

@@ -7,14 +7,17 @@ using System.ComponentModel;
 
 namespace Assignment__Zoo_Management_System_
 {
-    public class Cage
+    public class MyRegion
     {
-        public enum Type
+        public enum From
         {
-            Metal,
-            Wood,
-            Aqurium,
-            Free_Lane
+            Afica,
+            Antarctica,
+            Asia,
+            Australia,
+            Europe,
+            South_America,
+            North_America
         }
     }
 }

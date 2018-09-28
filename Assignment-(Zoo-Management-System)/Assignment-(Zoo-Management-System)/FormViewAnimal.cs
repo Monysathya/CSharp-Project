@@ -25,11 +25,19 @@ namespace Assignment__Zoo_Management_System_
             LoadAllAnimals();
 
             dgvViewAllAnimals.DataSource = animals;
-            dgvViewAllAnimals.Columns["CareTaker"].Visible = false;
-            dgvViewAllAnimals.Columns["Class"].Visible = false;
 
-            lblClass.DataBindings.Add("Text", animals, "Class");
+            dgvViewAllAnimals.Columns["CareTaker"].Visible = false;
+            dgvViewAllAnimals.Columns["_Class"].Visible = false;
+            dgvViewAllAnimals.Columns["Species"].Visible = false;
+            dgvViewAllAnimals.Columns["CanFly"].Visible = false;
+            dgvViewAllAnimals.Columns["IsDangerous"].Visible = false;
+            dgvViewAllAnimals.Columns["TypeOfFood"].Visible = false;
+
+            lblClass.DataBindings.Add("Text", animals, "_Class");
             lblSpecie.DataBindings.Add("Text", animals, "Species");
+            lblTypeOfFood.DataBindings.Add("Text", animals, "TypeOfFood");
+            lblIsDanger.DataBindings.Add("Text", animals, "IsDangerous");
+            lblCanFly.DataBindings.Add("Text", animals, "canFly");
         }
 
         private void LoadAllAnimals()
@@ -41,7 +49,7 @@ namespace Assignment__Zoo_Management_System_
                 Gender = Gender_.Gender.Male,
                 Age = 7,
                 Weight = 200,
-                CageType = Cage.CageType.METAL,
+                CageType = Cage.CageType.Metal,
                 CareTaker = (CareTaker)employees[0]
             });
 
@@ -52,7 +60,7 @@ namespace Assignment__Zoo_Management_System_
                 Gender = Gender_.Gender.Female,
                 Age = 7,
                 Weight = 200,
-                CageType = Cage.CageType.METAL,
+                CageType = Cage.CageType.Metal,
                 CareTaker = (CareTaker)employees[0]
             });
 
@@ -63,8 +71,21 @@ namespace Assignment__Zoo_Management_System_
                 Gender = Gender_.Gender.Female,
                 Age = 20,
                 Weight = 200,
-                CageType = Cage.CageType.WOOD,
-                CareTaker = (CareTaker)employees[1]
+                CageType = Cage.CageType.Wood,
+                CareTaker = (CareTaker)employees[1],
+                TypeOfFood = "Vegetation, grasses, small plants, bushes, fruit, .."
+            });
+
+            animals.Add(new Penguin()
+            {
+                ID = "A004",
+                Name = "Piggi",
+                Gender = Gender_.Gender.Female,
+                Age = 4,
+                Weight = 20,
+                CageType = Cage.CageType.No_Cage,
+                CareTaker = (CareTaker)employees[1],
+                TypeOfFood = "Krill (a shrimp-like crustacean in the Family Euphausiidae), squids, and fishes."
             });
         }
 

@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Assignment__Zoo_Management_System_
 {
-    class Tiger : Mammal
+    class Tiger : Animal
     {
-        public override bool IsDangerous
+        public override bool canFly
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public override bool isDangerous
         {
             get
             {
@@ -21,6 +29,14 @@ namespace Assignment__Zoo_Management_System_
             get
             {
                 return "Tiger";
+            }
+        }
+
+        public override string _Class
+        {
+            get
+            {
+                return Class.ClassType.Mammal.ToString();
             }
         }
     }

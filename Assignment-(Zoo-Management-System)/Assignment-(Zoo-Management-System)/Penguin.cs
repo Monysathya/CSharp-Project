@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment__Zoo_Management_System_
 {
-    class Elephant : Animal
+    class Penguin : Animal
     {
         public override bool canFly
         {
@@ -28,7 +28,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get
             {
-                return "Elephant";
+                return "Penguin";
             }
         }
 
@@ -36,7 +36,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get
             {
-                return Class.ClassType.Mammal.ToString();
+                return Class.ClassType.Bird.ToString();
             }
         }
     }

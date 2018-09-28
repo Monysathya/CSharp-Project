@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Assignment__Zoo_Management_System_
 {
-    public class Cage
+    public class Class
     {
-        public enum CageType
+        public enum ClassType
         {
-            Metal,
-            Wood,
-            Aqurium,
-            No_Cage
+            Mammal,
+            Bird,
+            Fish
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Assignment__Zoo_Management_System_
         private Cage.CageType cageType;
         private CareTaker careTaker;
         private Gender_.Gender gender;
+        private string typeOfFood;
         /* End of Field */
 
         /* Property */
@@ -55,6 +56,11 @@ namespace Assignment__Zoo_Management_System_
             get { return this.careTaker; }
             set { this.careTaker = value; }
         }
+        public string TypeOfFood
+        {
+            get { return this.typeOfFood; }
+            set { this.typeOfFood = value; }
+        }
         public string CareTakerID
         {
             get { return this.CareTaker.ID; }
@@ -63,14 +69,25 @@ namespace Assignment__Zoo_Management_System_
         {
             get { return this.CareTaker.Name; }
         }
-        public abstract string Class
+        /* Abstract method */
+        public abstract string _Class
         {
             get;
         }
-        public virtual string Species
+        public abstract string Species
         {
             get;
         }
+
+        public abstract bool canFly
+        {
+            get;
+        }
+        public abstract bool isDangerous
+        {
+            get;
+        }
+        /*End of abstract method */
         /* End of Property */
     }
 }

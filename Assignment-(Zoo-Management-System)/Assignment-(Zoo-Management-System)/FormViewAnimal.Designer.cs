@@ -42,6 +42,8 @@
             this.lblSpecie = new System.Windows.Forms.Label();
             this.lblTypeOfFood = new System.Windows.Forms.Label();
             this.lblIsDanger = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblCanFly = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewAllAnimals)).BeginInit();
             this.gbDetail.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +54,7 @@
             this.dgvViewAllAnimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvViewAllAnimals.Location = new System.Drawing.Point(12, 65);
             this.dgvViewAllAnimals.Name = "dgvViewAllAnimals";
-            this.dgvViewAllAnimals.Size = new System.Drawing.Size(815, 278);
+            this.dgvViewAllAnimals.Size = new System.Drawing.Size(1039, 278);
             this.dgvViewAllAnimals.TabIndex = 0;
             // 
             // label1
@@ -67,6 +69,8 @@
             // 
             // gbDetail
             // 
+            this.gbDetail.Controls.Add(this.lblCanFly);
+            this.gbDetail.Controls.Add(this.label6);
             this.gbDetail.Controls.Add(this.lblIsDanger);
             this.gbDetail.Controls.Add(this.lblTypeOfFood);
             this.gbDetail.Controls.Add(this.lblSpecie);
@@ -81,7 +85,7 @@
             this.gbDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDetail.Location = new System.Drawing.Point(12, 360);
             this.gbDetail.Name = "gbDetail";
-            this.gbDetail.Size = new System.Drawing.Size(815, 215);
+            this.gbDetail.Size = new System.Drawing.Size(1039, 261);
             this.gbDetail.TabIndex = 2;
             this.gbDetail.TabStop = false;
             this.gbDetail.Text = "More Detail";
@@ -124,7 +128,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(571, 169);
+            this.btnAdd.Location = new System.Drawing.Point(795, 202);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(238, 35);
             this.btnAdd.TabIndex = 4;
@@ -133,7 +137,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(571, 29);
+            this.btnUpdate.Location = new System.Drawing.Point(795, 29);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(238, 35);
             this.btnUpdate.TabIndex = 5;
@@ -142,7 +146,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(571, 73);
+            this.btnDelete.Location = new System.Drawing.Point(795, 78);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(238, 35);
             this.btnDelete.TabIndex = 7;
@@ -185,11 +189,29 @@
             this.lblIsDanger.TabIndex = 11;
             this.lblIsDanger.Text = "---";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 25);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Can Fly: ";
+            // 
+            // lblCanFly
+            // 
+            this.lblCanFly.AutoSize = true;
+            this.lblCanFly.Location = new System.Drawing.Point(103, 212);
+            this.lblCanFly.Name = "lblCanFly";
+            this.lblCanFly.Size = new System.Drawing.Size(33, 25);
+            this.lblCanFly.TabIndex = 13;
+            this.lblCanFly.Text = "---";
+            // 
             // FormViewAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 587);
+            this.ClientSize = new System.Drawing.Size(1063, 629);
             this.Controls.Add(this.gbDetail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvViewAllAnimals);
@@ -219,5 +241,7 @@
         private System.Windows.Forms.Label lblIsDanger;
         private System.Windows.Forms.Label lblTypeOfFood;
         private System.Windows.Forms.Label lblSpecie;
+        private System.Windows.Forms.Label lblCanFly;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -8,3 +8,6 @@ C:\Users\Sathya\Documents\Visual Studio 2015\Projects\OOAD\Assignment-(Zoo-Manag
 C:\Users\Sathya\Documents\Visual Studio 2015\Projects\OOAD\Assignment-(Zoo-Management-System)\Assignment-(Zoo-Management-System)\obj\Debug\Assignment-(Zoo-Management-System).exe
 C:\Users\Sathya\Documents\Visual Studio 2015\Projects\OOAD\Assignment-(Zoo-Management-System)\Assignment-(Zoo-Management-System)\obj\Debug\Assignment-(Zoo-Management-System).pdb
 C:\Users\Sathya\Documents\Visual Studio 2015\Projects\OOAD\Assignment-(Zoo-Management-System)\Assignment-(Zoo-Management-System)\obj\Debug\Assignment-(Zoo-Management-System).csprojResolveAssemblyReference.cache
+C:\Users\Sathya\Desktop\Git\C#\CSharp-Project\Assignment-(Zoo-Management-System)\Assignment-(Zoo-Management-System)\bin\Debug\Assignment-(Zoo-Management-System).exe.config
+C:\Users\Sathya\Desktop\Git\C#\CSharp-Project\Assignment-(Zoo-Management-System)\Assignment-(Zoo-Management-System)\obj\Debug\Assignment-(Zoo-Management-System).exe
+C:\Users\Sathya\Desktop\Git\C#\CSharp-Project\Assignment-(Zoo-Management-System)\Assignment-(Zoo-Management-System)\obj\Debug\Assignment-(Zoo-Management-System).pdb

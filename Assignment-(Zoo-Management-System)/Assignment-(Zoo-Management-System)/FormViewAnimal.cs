@@ -32,6 +32,16 @@ namespace Assignment__Zoo_Management_System_
             lblTypeOfFood.DataBindings.Add("Text", animals, "TypeOfFood");
             lblRegion.DataBindings.Add("Text", animals, "_Region");
             lblConservationStatus.DataBindings.Add("Text", animals, "ConservationStatus");
+
+            // Event button
+            btnAdd.Click += BtnAdd_Click;
+        }
+
+        private void BtnAdd_Click(object sender, System.EventArgs e)
+        {
+            FormAddNewAnimal frmAddNewAnimal = new FormAddNewAnimal();
+
+            frmAddNewAnimal.ShowDialog();
         }
 
         private void LoadAllAnimals()

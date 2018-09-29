@@ -50,6 +50,12 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Cichild.cs" />
     <Compile Include="Conservation.cs" />
+    <Compile Include="FormAddNewAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewAnimal.Designer.cs">
+      <DependentUpon>FormAddNewAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Penguin.cs" />
     <Compile Include="Cage.cs" />
     <Compile Include="CareTaker.cs" />
@@ -78,6 +84,9 @@
     <Compile Include="Tiger.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddNewAnimal.resx">
+      <DependentUpon>FormAddNewAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewAnimal.resx">
       <DependentUpon>FormViewAnimal.cs</DependentUpon>

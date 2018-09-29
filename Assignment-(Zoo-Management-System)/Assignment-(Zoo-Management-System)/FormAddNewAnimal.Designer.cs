@@ -222,6 +222,7 @@
             // 
             // cboGender
             // 
+            this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGender.FormattingEnabled = true;
             this.cboGender.Location = new System.Drawing.Point(185, 74);
@@ -241,8 +242,22 @@
             // 
             // cboAgeMonth
             // 
+            this.cboAgeMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboAgeMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboAgeMonth.FormattingEnabled = true;
+            this.cboAgeMonth.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11"});
             this.cboAgeMonth.Location = new System.Drawing.Point(326, 106);
             this.cboAgeMonth.Name = "cboAgeMonth";
             this.cboAgeMonth.Size = new System.Drawing.Size(86, 28);
@@ -270,6 +285,7 @@
             // 
             // cboClass
             // 
+            this.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboClass.FormattingEnabled = true;
             this.cboClass.Location = new System.Drawing.Point(185, 170);
@@ -279,6 +295,7 @@
             // 
             // cboSpecies
             // 
+            this.cboSpecies.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSpecies.FormattingEnabled = true;
             this.cboSpecies.Location = new System.Drawing.Point(185, 202);
@@ -288,6 +305,7 @@
             // 
             // cboRegion
             // 
+            this.cboRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRegion.FormattingEnabled = true;
             this.cboRegion.Location = new System.Drawing.Point(185, 266);
@@ -297,6 +315,7 @@
             // 
             // cboConservationStatus
             // 
+            this.cboConservationStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboConservationStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboConservationStatus.FormattingEnabled = true;
             this.cboConservationStatus.Location = new System.Drawing.Point(185, 298);
@@ -306,20 +325,22 @@
             // 
             // cboCageType
             // 
+            this.cboCageType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCageType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCageType.FormattingEnabled = true;
             this.cboCageType.Location = new System.Drawing.Point(185, 332);
             this.cboCageType.Name = "cboCageType";
-            this.cboCageType.Size = new System.Drawing.Size(191, 28);
+            this.cboCageType.Size = new System.Drawing.Size(206, 28);
             this.cboCageType.TabIndex = 38;
             // 
             // cboCareTaker
             // 
+            this.cboCareTaker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCareTaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCareTaker.FormattingEnabled = true;
             this.cboCareTaker.Location = new System.Drawing.Point(185, 364);
             this.cboCareTaker.Name = "cboCareTaker";
-            this.cboCareTaker.Size = new System.Drawing.Size(167, 28);
+            this.cboCareTaker.Size = new System.Drawing.Size(244, 28);
             this.cboCareTaker.TabIndex = 39;
             // 
             // btnAdd

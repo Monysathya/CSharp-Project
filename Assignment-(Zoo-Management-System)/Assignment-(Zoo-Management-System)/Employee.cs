@@ -14,6 +14,7 @@ namespace Assignment__Zoo_Management_System_
         private int age;
         private Gender._Gender gender;
         private string workDate;
+        private static List<Employee> emp = new List<Employee>();
         /* End of Field */
 
         /* Property */
@@ -46,6 +47,20 @@ namespace Assignment__Zoo_Management_System_
             get { return this.workDate; }
             set { this.workDate = value; }
         }    
+        public static List<Employee> Employees
+        {
+            get { return emp; }
+            set { emp = value; }
+        }
+        public string IDAndName
+        {
+            get { return this.ID + " " + this.Name; }
+        }
+
+        //public static string EmployeeList
+        //{
+        //    get { return }
+        //}
         /* End of Property */    
     }
 }

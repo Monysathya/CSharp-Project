@@ -17,6 +17,7 @@ namespace Assignment__Zoo_Management_System_
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
+            //Application.Run(new FormAddNewAnimal());
         }
     }
 }

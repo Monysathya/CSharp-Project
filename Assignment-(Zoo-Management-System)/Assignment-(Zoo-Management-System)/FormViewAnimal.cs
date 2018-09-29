@@ -6,7 +6,6 @@ namespace Assignment__Zoo_Management_System_
     public partial class FormViewAnimal : Form
     {
         private List<Animal> animals = new List<Animal>();
-        private List<Employee> employees = new List<Employee>();
 
         public FormViewAnimal()
         {
@@ -54,7 +53,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 2, Month = 4 },
                 _Weight = 200,
                 CageType = Cage.Type.Metal,
-                CareTaker = (CareTaker)employees[0],
+                CareTaker = (CareTaker) Employee.Employees[0],
                 TypeOfFood = "Meat, large-body prey, ..",
                 _Region = MyRegion.From.Afica
             });
@@ -67,7 +66,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 5, Month = 7 },
                 _Weight = 200,
                 CageType = Cage.Type.Metal,
-                CareTaker = (CareTaker)employees[0],
+                CareTaker = (CareTaker) Employee.Employees[0],
                 TypeOfFood = "Meat, large-body prey, ..",
                 _Region = MyRegion.From.Asia
             });
@@ -80,7 +79,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Month = 2, Year = 4 },
                 _Weight = 200,
                 CageType = Cage.Type.Wood,
-                CareTaker = (CareTaker)employees[1],
+                CareTaker = (CareTaker) Employee.Employees[1],
                 TypeOfFood = "Vegetation, grasses, small plants, bushes, fruit, ..",
                 _Region = MyRegion.From.Asia
             });
@@ -93,7 +92,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 5, Month = 1 },
                 _Weight = 20,
                 CageType = Cage.Type.Free_Lane,
-                CareTaker = (CareTaker)employees[1],
+                CareTaker = (CareTaker) Employee.Employees[1],
                 TypeOfFood = "Krill (a shrimp-like crustacean in the Family Euphausiidae), squids, and fishes.",
                 _Region = MyRegion.From.Antarctica
             });
@@ -106,7 +105,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 5, Month = 6 },
                 _Weight = 17,
                 CageType = Cage.Type.Wood,
-                CareTaker = (CareTaker) employees[0],
+                CareTaker = (CareTaker) Employee.Employees[0],
                 TypeOfFood = "Seed, insects, fruit, ..",
                 _Region = MyRegion.From.Asia 
             });
@@ -119,7 +118,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 3, Month = 5 },
                 _Weight = 17,
                 CageType = Cage.Type.Aqurium,
-                CareTaker = (CareTaker) employees[0],
+                CareTaker = (CareTaker) Employee.Employees[0],
                 TypeOfFood = "Small-fish, snail, some plant",
                 _Region = MyRegion.From.Afica
             });
@@ -127,7 +126,7 @@ namespace Assignment__Zoo_Management_System_
 
         private void LoadAllEmployees()
         {
-            employees.Add(new CareTaker()
+            Employee.Employees.Add(new CareTaker()
             {
                 ID = "E001",
                 Name = "Sok Dara",
@@ -136,7 +135,7 @@ namespace Assignment__Zoo_Management_System_
                 WorkDate = "20 October 2000"
             });
 
-            employees.Add(new CareTaker()
+            Employee.Employees.Add(new CareTaker()
             {
                 ID = "E002",
                 Name = "Keo Thida",
@@ -145,7 +144,7 @@ namespace Assignment__Zoo_Management_System_
                 WorkDate = "21 September 2002"
             });
 
-            employees.Add(new Security()
+            Employee.Employees.Add(new Security()
             {
                 ID = "E003",
                 Name = "Chan Tola",

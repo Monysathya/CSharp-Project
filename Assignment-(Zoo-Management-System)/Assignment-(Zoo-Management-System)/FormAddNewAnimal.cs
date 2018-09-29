@@ -15,6 +15,17 @@ namespace Assignment__Zoo_Management_System_
         public FormAddNewAnimal()
         {
             InitializeComponent();
+
+            // Set datasource to combobox
+            cboGender.DataSource = Enum.GetValues(typeof(Gender._Gender));
+            cboClass.DataSource = Enum.GetValues(typeof(Class.Type));
+            //cboSpecies.DataSource = Enum.GetValues(typeof());
+            cboRegion.DataSource = Enum.GetValues(typeof(MyRegion.From));
+            cboConservationStatus.DataSource = Enum.GetValues(typeof(Conservation.Status));
+            cboCageType.DataSource = Enum.GetValues(typeof(Cage.Type));
+            cboCareTaker.DataSource = Employee.Employees;
+            cboCareTaker.DisplayMember = "IDAndName";
+
         }
     }
 }

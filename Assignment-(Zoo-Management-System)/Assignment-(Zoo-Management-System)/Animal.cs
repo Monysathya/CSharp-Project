@@ -12,7 +12,7 @@ namespace Assignment__Zoo_Management_System_
         /* Field */
         private string id;
         private string name;
-        private int age;
+        private Age age = new Age();
         private double weight;
         private Cage.Type cageType;
         private CareTaker careTaker;
@@ -37,15 +37,23 @@ namespace Assignment__Zoo_Management_System_
             get { return this.gender; }
             set { this.gender = value; }
         }
-        public int Age
+        public string Age
         {
-            get { return this.age; }
+            get { return this._Age.ToString(); }
+        }
+        public Age _Age
+        {
+            private get { return this.age; }
             set { this.age = value; }
         }
-        public double Weight
+        public double _Weight
         {
-            get { return this.weight; }
+            private get { return this.weight; }
             set { this.weight = value; }
+        }
+        public string Weight
+        {
+            get { return this._Weight.ToString() + " Kg"; }
         }
         public Cage.Type CageType
         {

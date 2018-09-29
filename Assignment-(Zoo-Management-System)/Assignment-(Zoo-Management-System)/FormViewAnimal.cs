@@ -5,8 +5,6 @@ namespace Assignment__Zoo_Management_System_
 {
     public partial class FormViewAnimal : Form
     {
-        private List<Animal> animals = new List<Animal>();
-
         public FormViewAnimal()
         {
             InitializeComponent();
@@ -15,7 +13,7 @@ namespace Assignment__Zoo_Management_System_
             LoadAllEmployees();
             LoadAllAnimals();
 
-            dgvViewAllAnimals.DataSource = animals;
+            dgvViewAllAnimals.DataSource = Animal.Animals;
 
             // Hide datagridview columns
             dgvViewAllAnimals.Columns["CareTaker"].Visible = false;
@@ -26,11 +24,11 @@ namespace Assignment__Zoo_Management_System_
             dgvViewAllAnimals.Columns["TypeOfFood"].Visible = false;
 
             // Bind data from animals property to label
-            lblClass.DataBindings.Add("Text", animals, "_Class");
-            lblSpecie.DataBindings.Add("Text", animals, "Species");
-            lblTypeOfFood.DataBindings.Add("Text", animals, "TypeOfFood");
-            lblRegion.DataBindings.Add("Text", animals, "_Region");
-            lblConservationStatus.DataBindings.Add("Text", animals, "ConservationStatus");
+            lblClass.DataBindings.Add("Text", Animal.Animals, "_Class");
+            lblSpecie.DataBindings.Add("Text", Animal.Animals, "Species");
+            lblTypeOfFood.DataBindings.Add("Text", Animal.Animals, "TypeOfFood");
+            lblRegion.DataBindings.Add("Text", Animal.Animals, "_Region");
+            lblConservationStatus.DataBindings.Add("Text", Animal.Animals, "ConservationStatus");
 
             // Event button
             btnAdd.Click += BtnAdd_Click;
@@ -45,7 +43,7 @@ namespace Assignment__Zoo_Management_System_
 
         private void LoadAllAnimals()
         {
-            animals.Add(new Lion()
+            Animal.Animals.Add(new Lion()
             {
                 ID = "A001",
                 Name = "Lulu",
@@ -53,12 +51,12 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 2, Month = 4 },
                 _Weight = 200,
                 CageType = Cage.Type.Metal,
-                CareTaker = (CareTaker) Employee.Employees[0],
+                CareTaker = (CareTaker)Employee.Employees[0],
                 TypeOfFood = "Meat, large-body prey, ..",
                 _Region = MyRegion.From.Afica
             });
 
-            animals.Add(new Tiger()
+            Animal.Animals.Add(new Tiger()
             {
                 ID = "A002",
                 Name = "Lili",
@@ -66,12 +64,12 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 5, Month = 7 },
                 _Weight = 200,
                 CageType = Cage.Type.Metal,
-                CareTaker = (CareTaker) Employee.Employees[0],
+                CareTaker = (CareTaker)Employee.Employees[0],
                 TypeOfFood = "Meat, large-body prey, ..",
                 _Region = MyRegion.From.Asia
             });
 
-            animals.Add(new Elephant()
+            Animal.Animals.Add(new Elephant()
             {
                 ID = "A003",
                 Name = "Momo",
@@ -79,12 +77,12 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Month = 2, Year = 4 },
                 _Weight = 200,
                 CageType = Cage.Type.Wood,
-                CareTaker = (CareTaker) Employee.Employees[1],
+                CareTaker = (CareTaker)Employee.Employees[1],
                 TypeOfFood = "Vegetation, grasses, small plants, bushes, fruit, ..",
                 _Region = MyRegion.From.Asia
             });
 
-            animals.Add(new Penguin()
+            Animal.Animals.Add(new Penguin()
             {
                 ID = "A004",
                 Name = "Piggi",
@@ -92,12 +90,12 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 5, Month = 1 },
                 _Weight = 20,
                 CageType = Cage.Type.Free_Lane,
-                CareTaker = (CareTaker) Employee.Employees[1],
+                CareTaker = (CareTaker)Employee.Employees[1],
                 TypeOfFood = "Krill (a shrimp-like crustacean in the Family Euphausiidae), squids, and fishes.",
                 _Region = MyRegion.From.Antarctica
             });
 
-            animals.Add(new Peocock()
+            Animal.Animals.Add(new Peocock()
             {
                 ID = "A005",
                 Name = "Nana",
@@ -105,12 +103,12 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 5, Month = 6 },
                 _Weight = 17,
                 CageType = Cage.Type.Wood,
-                CareTaker = (CareTaker) Employee.Employees[0],
+                CareTaker = (CareTaker)Employee.Employees[0],
                 TypeOfFood = "Seed, insects, fruit, ..",
-                _Region = MyRegion.From.Asia 
+                _Region = MyRegion.From.Asia
             });
 
-            animals.Add(new Cichild()
+            Animal.Animals.Add(new Cichild()
             {
                 ID = "A006",
                 Name = "Sylar",
@@ -118,7 +116,7 @@ namespace Assignment__Zoo_Management_System_
                 _Age = new Age() { Year = 3, Month = 5 },
                 _Weight = 17,
                 CageType = Cage.Type.Aqurium,
-                CareTaker = (CareTaker) Employee.Employees[0],
+                CareTaker = (CareTaker)Employee.Employees[0],
                 TypeOfFood = "Small-fish, snail, some plant",
                 _Region = MyRegion.From.Afica
             });

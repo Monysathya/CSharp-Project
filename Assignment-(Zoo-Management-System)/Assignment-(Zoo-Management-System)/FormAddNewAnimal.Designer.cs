@@ -84,7 +84,7 @@
             this.txtName.Location = new System.Drawing.Point(185, 42);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(244, 26);
-            this.txtName.TabIndex = 3;
+            this.txtName.TabIndex = 2;
             // 
             // label2
             // 
@@ -112,7 +112,8 @@
             this.txtAgeYear.Location = new System.Drawing.Point(185, 106);
             this.txtAgeYear.Name = "txtAgeYear";
             this.txtAgeYear.Size = new System.Drawing.Size(78, 26);
-            this.txtAgeYear.TabIndex = 7;
+            this.txtAgeYear.TabIndex = 4;
+            this.txtAgeYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
@@ -130,7 +131,8 @@
             this.txtWeight.Location = new System.Drawing.Point(185, 138);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(112, 26);
-            this.txtWeight.TabIndex = 9;
+            this.txtWeight.TabIndex = 6;
+            this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -158,7 +160,7 @@
             this.txtTypeOfFood.Location = new System.Drawing.Point(185, 234);
             this.txtTypeOfFood.Name = "txtTypeOfFood";
             this.txtTypeOfFood.Size = new System.Drawing.Size(332, 26);
-            this.txtTypeOfFood.TabIndex = 15;
+            this.txtTypeOfFood.TabIndex = 9;
             // 
             // label7
             // 
@@ -228,7 +230,7 @@
             this.cboGender.Location = new System.Drawing.Point(185, 74);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(157, 28);
-            this.cboGender.TabIndex = 28;
+            this.cboGender.TabIndex = 3;
             // 
             // label15
             // 
@@ -261,7 +263,7 @@
             this.cboAgeMonth.Location = new System.Drawing.Point(326, 106);
             this.cboAgeMonth.Name = "cboAgeMonth";
             this.cboAgeMonth.Size = new System.Drawing.Size(86, 28);
-            this.cboAgeMonth.TabIndex = 30;
+            this.cboAgeMonth.TabIndex = 5;
             // 
             // label16
             // 
@@ -291,7 +293,7 @@
             this.cboClass.Location = new System.Drawing.Point(185, 170);
             this.cboClass.Name = "cboClass";
             this.cboClass.Size = new System.Drawing.Size(206, 28);
-            this.cboClass.TabIndex = 33;
+            this.cboClass.TabIndex = 7;
             // 
             // cboSpecies
             // 
@@ -301,7 +303,7 @@
             this.cboSpecies.Location = new System.Drawing.Point(185, 202);
             this.cboSpecies.Name = "cboSpecies";
             this.cboSpecies.Size = new System.Drawing.Size(206, 28);
-            this.cboSpecies.TabIndex = 34;
+            this.cboSpecies.TabIndex = 8;
             // 
             // cboRegion
             // 
@@ -311,7 +313,7 @@
             this.cboRegion.Location = new System.Drawing.Point(185, 266);
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(206, 28);
-            this.cboRegion.TabIndex = 35;
+            this.cboRegion.TabIndex = 10;
             // 
             // cboConservationStatus
             // 
@@ -321,7 +323,7 @@
             this.cboConservationStatus.Location = new System.Drawing.Point(185, 298);
             this.cboConservationStatus.Name = "cboConservationStatus";
             this.cboConservationStatus.Size = new System.Drawing.Size(244, 28);
-            this.cboConservationStatus.TabIndex = 36;
+            this.cboConservationStatus.TabIndex = 11;
             // 
             // cboCageType
             // 
@@ -331,7 +333,7 @@
             this.cboCageType.Location = new System.Drawing.Point(185, 332);
             this.cboCageType.Name = "cboCageType";
             this.cboCageType.Size = new System.Drawing.Size(206, 28);
-            this.cboCageType.TabIndex = 38;
+            this.cboCageType.TabIndex = 12;
             // 
             // cboCareTaker
             // 
@@ -341,7 +343,7 @@
             this.cboCareTaker.Location = new System.Drawing.Point(185, 364);
             this.cboCareTaker.Name = "cboCareTaker";
             this.cboCareTaker.Size = new System.Drawing.Size(244, 28);
-            this.cboCareTaker.TabIndex = 39;
+            this.cboCareTaker.TabIndex = 13;
             // 
             // btnAdd
             // 
@@ -349,7 +351,7 @@
             this.btnAdd.Location = new System.Drawing.Point(12, 438);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(157, 35);
-            this.btnAdd.TabIndex = 40;
+            this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
@@ -359,7 +361,7 @@
             this.btnCancel.Location = new System.Drawing.Point(185, 438);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(157, 35);
-            this.btnCancel.TabIndex = 41;
+            this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 

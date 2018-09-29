@@ -19,6 +19,7 @@ namespace Assignment__Zoo_Management_System_
         private Gender._Gender gender;
         private string typeOfFood;
         private MyRegion.From region;
+        private static List<Animal> animals = new List<Animal>();
         /* End of Field */
 
         /* Property */
@@ -83,7 +84,8 @@ namespace Assignment__Zoo_Management_System_
             get { return this.region; }
             set { this.region = value; }
         }
-        /* Abstract method */
+
+        /* Abstract property */
         public abstract Class.Type _Class
         {
             get;
@@ -96,7 +98,16 @@ namespace Assignment__Zoo_Management_System_
         {
             get;
         }
-        /*End of abstract method */
+        /* End of abstract property */
+
+        /* Static property */
+        public static List<Animal> Animals
+        {
+            get { return animals; }
+            set { animals = value; }
+        }
+        /* End of static property */
+
         /* End of Property */
     }
 }

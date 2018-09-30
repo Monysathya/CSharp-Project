@@ -19,7 +19,7 @@ namespace Assignment__Zoo_Management_System_
         private Gender._Gender gender;
         private string typeOfFood;
         private MyRegion.From region;
-        private static List<Animal> animals = new List<Animal>();
+        private static BindingList<Animal> animals = new BindingList<Animal>();
         /* End of Field */
 
         /* Property */
@@ -101,7 +101,7 @@ namespace Assignment__Zoo_Management_System_
         /* End of abstract property */
 
         /* Static property */
-        public static List<Animal> Animals
+        public static BindingList<Animal> Animals
         {
             get { return animals; }
             set { animals = value; }

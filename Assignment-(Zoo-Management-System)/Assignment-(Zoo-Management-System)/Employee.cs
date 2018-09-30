@@ -56,11 +56,6 @@ namespace Assignment__Zoo_Management_System_
         {
             get { return this.ID + " " + this.Name; }
         }
-
-        //public static string EmployeeList
-        //{
-        //    get { return }
-        //}
         /* End of Property */    
     }
 }

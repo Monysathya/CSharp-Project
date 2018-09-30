@@ -12,21 +12,29 @@ namespace Assignment__Zoo_Management_System_
 {
     public partial class FormAddNewAnimal : Form
     {
+        public delegate void CreateHandler(object sender, Animal animal);
+        public event CreateHandler Create = null;
+
         public FormAddNewAnimal()
         {
             InitializeComponent();
 
             // Set datasource to combobox
             cboGender.DataSource = Enum.GetValues(typeof(Gender._Gender));
-            cboClass.DataSource = Enum.GetValues(typeof(Class.Type));
             cboSpecies.DataSource = Animal.Animals;
-            cboSpecies.DisplayMember = "Species"; 
+            cboSpecies.DisplayMember = "Species";
             cboRegion.DataSource = Enum.GetValues(typeof(MyRegion.From));
             cboConservationStatus.DataSource = Enum.GetValues(typeof(Conservation.Status));
             cboCageType.DataSource = Enum.GetValues(typeof(Cage.Type));
-            cboCareTaker.DataSource = Employee.Employees;
-            cboCareTaker.DisplayMember = "IDAndName";
 
+            foreach (Employee e in Employee.Employees)
+            {
+                if (e is CareTaker)
+                    cboCareTaker.Items.Add(e.IDAndName);
+            }
+
+            cboCareTaker.SelectedIndex = 0;
+            cboAgeMonth.SelectedIndex = 0;
             // Button event click
             btnAdd.Click += BtnAdd_Click;
             btnCancel.Click += BtnCancel_Click;
@@ -49,7 +57,46 @@ namespace Assignment__Zoo_Management_System_
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Employee careTaker = new CareTaker();
+            Animal animal = null;
+
+            string IDAndName = cboCareTaker.Text;
+            string[] caretakerID = IDAndName.Split(null);  // Split IDAndName property and taker only ID
+
+            foreach (Employee t in Employee.Employees)
+            {
+                if (t.ID == caretakerID[0])
+                {
+                    careTaker = (CareTaker)t;
+                    break;
+                }
+            }
+
+            if (cboSpecies.Text == "Lion")
+            {               
+                try
+                {
+                    animal = new Lion()
+                    {
+                        ID = MyString.FirstLetterToUpper(txtID.Text),
+                        Name = MyString.FirstLetterToUpper(txtName.Text),
+                        Gender = (Gender._Gender)cboGender.SelectedItem,
+                        _Age = new Age() { Year = int.Parse(txtAgeYear.Text), Month = int.Parse(cboAgeMonth.Text) },
+                        _Weight = double.Parse(txtWeight.Text),
+                        TypeOfFood = MyString.FirstLetterToUpper(txtTypeOfFood.Text),
+                        _Region = (MyRegion.From)cboRegion.SelectedItem,
+                        CageType = (Cage.Type)cboCageType.SelectedItem,
+                        CareTaker = (CareTaker)careTaker
+                    };
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            if (Create != null)
+                Create(this, animal);
         }
     }
 }

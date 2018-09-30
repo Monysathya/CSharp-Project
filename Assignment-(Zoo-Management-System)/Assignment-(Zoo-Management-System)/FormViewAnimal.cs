@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Assignment__Zoo_Management_System_
 {
     public partial class FormViewAnimal : Form
     {
+        //private BindingList<Animal> animals = new BindingList<Animal>();
+
         public FormViewAnimal()
         {
             InitializeComponent();
@@ -38,7 +41,13 @@ namespace Assignment__Zoo_Management_System_
         {
             FormAddNewAnimal frmAddNewAnimal = new FormAddNewAnimal();
 
-            frmAddNewAnimal.ShowDialog();
+            frmAddNewAnimal.Create += FrmAddNewAnimal_Create;
+            frmAddNewAnimal.Show();
+        }
+
+        private void FrmAddNewAnimal_Create(object sender, Animal animal)
+        {
+            Animal.Animals.Add(animal);
         }
 
         private void LoadAllAnimals()

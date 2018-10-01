@@ -12,18 +12,28 @@ namespace Assignment__Zoo_Management_System_
 {
     public partial class FormMain : Form
     {
+        FormViewAnimal formViewAnimal = new FormViewAnimal();
+        FormViewEmployee formViewEmployee = new FormViewEmployee();
+
         public FormMain()
         {
             InitializeComponent();
 
+            //LoadData.MyEmployees();
+            LoadData.Animals();
+
             btnViewAllAnimals.Click += BtnViewAllAnimals_Click;
+            btnViewAllEmployee.Click += BtnViewAllEmployee_Click;
+        }
+
+        private void BtnViewAllEmployee_Click(object sender, EventArgs e)
+        {
+            formViewEmployee.ShowDialog();
         }
 
         private void BtnViewAllAnimals_Click(object sender, EventArgs e)
         {
-            FormViewAnimal formViewAnimal = new FormViewAnimal();
-
-            formViewAnimal.Show();
+            formViewAnimal.ShowDialog();
         }
     }
 }

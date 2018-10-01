@@ -10,8 +10,8 @@ namespace Assignment__Zoo_Management_System_
     {
         public enum _Gender
         {
-            Male,
-            Female
+            Female,
+            Male
         }
     }
 }

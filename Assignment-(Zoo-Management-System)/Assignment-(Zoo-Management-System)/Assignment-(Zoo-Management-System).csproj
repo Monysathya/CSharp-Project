@@ -56,6 +56,13 @@
     <Compile Include="FormAddNewAnimal.Designer.cs">
       <DependentUpon>FormAddNewAnimal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewEmployee.Designer.cs">
+      <DependentUpon>FormViewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadData.cs" />
     <Compile Include="MyString.cs" />
     <Compile Include="Penguin.cs" />
     <Compile Include="Cage.cs" />
@@ -91,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewAnimal.resx">
       <DependentUpon>FormViewAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewEmployee.resx">
+      <DependentUpon>FormViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

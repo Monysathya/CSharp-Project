@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Assignment__Zoo_Management_System_
         private int age;
         private Gender._Gender gender;
         private string workDate;
-        private static List<Employee> emp = new List<Employee>();
+        private static BindingList<Employee> emp = new BindingList<Employee>();
         /* End of Field */
 
         /* Property */
@@ -28,6 +29,11 @@ namespace Assignment__Zoo_Management_System_
             get { return this.name; }
             set { this.name = value; }
         }
+        public Gender._Gender Gender
+        {
+            get { return this.gender; }
+            set { this.gender = value; }
+        }
         public int Age
         {
             get { return this.age; }
@@ -37,17 +43,12 @@ namespace Assignment__Zoo_Management_System_
         {
             get;
         }
-        public Gender._Gender Gender
-        {
-            get { return this.gender; }
-            set { this.gender = value; }
-        }
         public string WorkDate
         {
             get { return this.workDate; }
             set { this.workDate = value; }
-        }    
-        public static List<Employee> Employees
+        }
+        public static BindingList<Employee> Employees
         {
             get { return emp; }
             set { emp = value; }
@@ -56,6 +57,7 @@ namespace Assignment__Zoo_Management_System_
         {
             get { return this.ID + " " + this.Name; }
         }
-        /* End of Property */    
+        
+        /* End of Property */
     }
 }

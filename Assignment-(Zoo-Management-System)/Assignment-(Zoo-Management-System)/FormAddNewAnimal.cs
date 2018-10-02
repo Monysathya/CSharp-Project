@@ -32,7 +32,7 @@ namespace Assignment__Zoo_Management_System_
             {
                 cboSpecies.Items.Add(s.value);
             }
-            
+
             // Add only care taker to combobox care taker
             foreach (Employee e in Employee.Employees)
             {
@@ -85,19 +85,109 @@ namespace Assignment__Zoo_Management_System_
                     }
                 }
 
+                var tID = MyString.FirstLetterToUpper(txtID.Text);
+                var tName = MyString.FirstLetterToUpper(txtName.Text);
+                var tGender = (Gender._Gender)cboGender.SelectedItem;
+                var tAge = new Age() { Year = int.Parse(txtAgeYear.Text), Month = int.Parse(cboAgeMonth.Text) };
+                var tWeight = double.Parse(txtWeight.Text);
+                var tTypeOfFood = MyString.FirstLetterToUpper(txtTypeOfFood.Text);
+                var tRegion = (MyRegion.From)cboRegion.SelectedItem;
+                var tCageType = (Cage.Type)cboCageType.SelectedItem;
+                var tCareTaker = (CareTaker)careTaker;
+
                 if (cboSpecies.Text == "Lion")
                 {
                     animal = new Lion()
                     {
-                        ID = MyString.FirstLetterToUpper(txtID.Text),
-                        Name = MyString.FirstLetterToUpper(txtName.Text),
-                        Gender = (Gender._Gender)cboGender.SelectedItem,
-                        _Age = new Age() { Year = int.Parse(txtAgeYear.Text), Month = int.Parse(cboAgeMonth.Text) },
-                        _Weight = double.Parse(txtWeight.Text),
-                        TypeOfFood = MyString.FirstLetterToUpper(txtTypeOfFood.Text),
-                        _Region = (MyRegion.From)cboRegion.SelectedItem,
-                        CageType = (Cage.Type)cboCageType.SelectedItem,
-                        CareTaker = (CareTaker)careTaker
+                        ID = tID,
+                        Name = tName,
+                        Gender = tGender,
+                        _Age = tAge,
+                        _Weight = tWeight,
+                        TypeOfFood = tTypeOfFood,
+                        _Region = tRegion,
+                        CageType = tCageType,
+                        CareTaker = tCareTaker
+                    };
+                }
+
+                if (cboSpecies.Text == "Tiger")
+                {
+                    animal = new Tiger()
+                    {
+                        ID = tID,
+                        Name = tName,
+                        Gender = tGender,
+                        _Age = tAge,
+                        _Weight = tWeight,
+                        TypeOfFood = tTypeOfFood,
+                        _Region = tRegion,
+                        CageType = tCageType,
+                        CareTaker = tCareTaker
+                    };
+                }
+
+                if (cboSpecies.Text == "Elephant")
+                {
+                    animal = new Elephant()
+                    {
+                        ID = tID,
+                        Name = tName,
+                        Gender = tGender,
+                        _Age = tAge,
+                        _Weight = tWeight,
+                        TypeOfFood = tTypeOfFood,
+                        _Region = tRegion,
+                        CageType = tCageType,
+                        CareTaker = tCareTaker
+                    };
+                }
+
+                if (cboSpecies.Text == "Penguin")
+                {
+                    animal = new Penguin()
+                    {
+                        ID = tID,
+                        Name = tName,
+                        Gender = tGender,
+                        _Age = tAge,
+                        _Weight = tWeight,
+                        TypeOfFood = tTypeOfFood,
+                        _Region = tRegion,
+                        CageType = tCageType,
+                        CareTaker = tCareTaker
+                    };
+                }
+
+                if (cboSpecies.Text == "Peocock")
+                {
+                    animal = new Peocock()
+                    {
+                        ID = tID,
+                        Name = tName,
+                        Gender = tGender,
+                        _Age = tAge,
+                        _Weight = tWeight,
+                        TypeOfFood = tTypeOfFood,
+                        _Region = tRegion,
+                        CageType = tCageType,
+                        CareTaker = tCareTaker
+                    };
+                }
+
+                if (cboSpecies.Text == "Cichild")
+                {
+                    animal = new Cichild()
+                    {
+                        ID = tID,
+                        Name = tName,
+                        Gender = tGender,
+                        _Age = tAge,
+                        _Weight = tWeight,
+                        TypeOfFood = tTypeOfFood,
+                        _Region = tRegion,
+                        CageType = tCageType,
+                        CareTaker = tCareTaker
                     };
                 }
             }

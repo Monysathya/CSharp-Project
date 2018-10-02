@@ -12,11 +12,13 @@ namespace Assignment__Zoo_Management_System_
 {
     public partial class FormViewEmployee : Form
     {
+        private BindingSource bs = new BindingSource();
         public FormViewEmployee()
         {
             InitializeComponent();
 
-            dgvViewAllEmployee.DataSource = Employee.Employees;
+            bs.DataSource = Employee.Employees;
+            dgvViewAllEmployee.DataSource = bs;
 
             dgvViewAllEmployee.Columns["IDAndName"].Visible = false;
 
@@ -25,6 +27,19 @@ namespace Assignment__Zoo_Management_System_
             // Button event
             btnAdd.Click += BtnAdd_Click;
             btnSort.Click += BtnSort_Click;
+            btnDelete.Click += BtnDelete_Click;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete this record?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // If user want to delete last record of Care Taker
+                if (bs.Current is CareTaker && Employee.Employees.Where(x => x.Position == "Care Taker").Count() <= 1)
+                    MessageBox.Show("You cannot delete this record. Please add another Care Taker if you want to delete this record.", "Cannot delete");
+                else
+                    Employee.Employees.RemoveAt(dgvViewAllEmployee.CurrentRow.Index);
+            }
         }
 
         private void BtnSort_Click(object sender, EventArgs e)

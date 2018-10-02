@@ -39,13 +39,21 @@ namespace Assignment__Zoo_Management_System_
                 dgvViewAllEmployee.DataSource = Employee.Employees.OrderBy(x => x.Age).ToList();
             if (cboSort.Text == "Position")
                 dgvViewAllEmployee.DataSource = Employee.Employees.OrderBy(x => x.Position).ToList();
+            if (cboSort.Text == "Salary")
+                dgvViewAllEmployee.DataSource = Employee.Employees.OrderBy(x => x.Salary).ToList();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             FormAddNewEmployee frmAddNewEmployee = new FormAddNewEmployee();
 
+            frmAddNewEmployee.Create += FrmAddNewEmployee_Create;
             frmAddNewEmployee.ShowDialog();
+        }
+
+        private void FrmAddNewEmployee_Create(object sender, Employee employee)
+        {
+            Employee.Employees.Add(employee);
         }
     }
 }

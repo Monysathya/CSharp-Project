@@ -44,27 +44,34 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cboDay = new System.Windows.Forms.ComboBox();
+            this.cboMonth = new System.Windows.Forms.ComboBox();
+            this.cboYear = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(270, 316);
+            this.btnCancel.Location = new System.Drawing.Point(271, 454);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(209, 43);
-            this.btnCancel.TabIndex = 25;
+            this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(32, 316);
+            this.btnAdd.Location = new System.Drawing.Point(33, 454);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(209, 43);
-            this.btnAdd.TabIndex = 24;
+            this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
@@ -73,20 +80,20 @@
             this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGender.FormattingEnabled = true;
-            this.cboGender.Location = new System.Drawing.Point(127, 132);
+            this.cboGender.Location = new System.Drawing.Point(137, 133);
             this.cboGender.Margin = new System.Windows.Forms.Padding(4);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(208, 33);
-            this.cboGender.TabIndex = 20;
+            this.cboGender.TabIndex = 4;
             // 
             // txtAge
             // 
             this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(127, 171);
+            this.txtAge.Location = new System.Drawing.Point(137, 172);
             this.txtAge.Margin = new System.Windows.Forms.Padding(4);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(114, 30);
-            this.txtAge.TabIndex = 21;
+            this.txtAge.TabIndex = 5;
             this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
@@ -114,11 +121,11 @@
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(127, 56);
+            this.txtFirstName.Location = new System.Drawing.Point(137, 57);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(255, 30);
-            this.txtFirstName.TabIndex = 18;
+            this.txtFirstName.TabIndex = 2;
             // 
             // label2
             // 
@@ -134,11 +141,11 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(127, 16);
+            this.txtID.Location = new System.Drawing.Point(137, 17);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(148, 30);
-            this.txtID.TabIndex = 17;
+            this.txtID.TabIndex = 1;
             // 
             // label1
             // 
@@ -156,11 +163,11 @@
             this.cboPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPosition.FormattingEnabled = true;
-            this.cboPosition.Location = new System.Drawing.Point(127, 211);
+            this.cboPosition.Location = new System.Drawing.Point(137, 212);
             this.cboPosition.Margin = new System.Windows.Forms.Padding(4);
             this.cboPosition.Name = "cboPosition";
             this.cboPosition.Size = new System.Drawing.Size(255, 33);
-            this.cboPosition.TabIndex = 26;
+            this.cboPosition.TabIndex = 6;
             // 
             // label5
             // 
@@ -176,11 +183,11 @@
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(127, 250);
+            this.txtSalary.Location = new System.Drawing.Point(137, 250);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(4);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(114, 30);
-            this.txtSalary.TabIndex = 28;
+            this.txtSalary.Size = new System.Drawing.Size(173, 30);
+            this.txtSalary.TabIndex = 7;
             this.txtSalary.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
@@ -197,11 +204,11 @@
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(127, 94);
+            this.txtLastName.Location = new System.Drawing.Point(137, 95);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(255, 30);
-            this.txtLastName.TabIndex = 30;
+            this.txtLastName.TabIndex = 3;
             // 
             // label7
             // 
@@ -214,11 +221,108 @@
             this.label7.TabIndex = 31;
             this.label7.Text = "Last Name: ";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(13, 291);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(116, 25);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Work Date: ";
+            // 
+            // cboDay
+            // 
+            this.cboDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDay.FormattingEnabled = true;
+            this.cboDay.Location = new System.Drawing.Point(245, 288);
+            this.cboDay.Margin = new System.Windows.Forms.Padding(4);
+            this.cboDay.Name = "cboDay";
+            this.cboDay.Size = new System.Drawing.Size(105, 33);
+            this.cboDay.TabIndex = 8;
+            // 
+            // cboMonth
+            // 
+            this.cboMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMonth.FormattingEnabled = true;
+            this.cboMonth.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cboMonth.Location = new System.Drawing.Point(245, 329);
+            this.cboMonth.Margin = new System.Windows.Forms.Padding(4);
+            this.cboMonth.Name = "cboMonth";
+            this.cboMonth.Size = new System.Drawing.Size(192, 33);
+            this.cboMonth.TabIndex = 9;
+            // 
+            // cboYear
+            // 
+            this.cboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboYear.FormattingEnabled = true;
+            this.cboYear.Location = new System.Drawing.Point(245, 370);
+            this.cboYear.Margin = new System.Windows.Forms.Padding(4);
+            this.cboYear.Name = "cboYear";
+            this.cboYear.Size = new System.Drawing.Size(147, 33);
+            this.cboYear.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(137, 291);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 25);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Day:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(137, 332);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 25);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Month: ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(137, 373);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 25);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Year: ";
+            // 
             // FormAddNewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 409);
+            this.ClientSize = new System.Drawing.Size(520, 529);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cboYear);
+            this.Controls.Add(this.cboMonth);
+            this.Controls.Add(this.cboDay);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSalary);
@@ -260,5 +364,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cboDay;
+        private System.Windows.Forms.ComboBox cboMonth;
+        private System.Windows.Forms.ComboBox cboYear;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

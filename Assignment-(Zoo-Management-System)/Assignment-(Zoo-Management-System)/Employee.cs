@@ -68,15 +68,18 @@ namespace Assignment__Zoo_Management_System_
         {
             get { return string.Format("{0:C2}", this._Salary); }
         }
+        public string IDAndName
+        {
+            get { return this.ID + " " + this.Name; }
+        }
+
+        /* Static property */
         public static BindingList<Employee> Employees
         {
             get { return emp; }
             set { emp = value; }
         }
-        public string IDAndName
-        {
-            get { return this.ID + " " + this.Name; }
-        }
+        /* End of static property */
         
         /* End of Property */
     }

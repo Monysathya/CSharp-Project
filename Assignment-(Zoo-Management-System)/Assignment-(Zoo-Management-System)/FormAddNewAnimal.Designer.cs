@@ -73,7 +73,7 @@
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(247, 12);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(148, 30);
             this.txtID.TabIndex = 1;
@@ -82,7 +82,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(247, 52);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(324, 30);
             this.txtName.TabIndex = 2;
@@ -113,7 +113,7 @@
             // 
             this.txtAgeYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgeYear.Location = new System.Drawing.Point(247, 130);
-            this.txtAgeYear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAgeYear.Margin = new System.Windows.Forms.Padding(4);
             this.txtAgeYear.Name = "txtAgeYear";
             this.txtAgeYear.Size = new System.Drawing.Size(103, 30);
             this.txtAgeYear.TabIndex = 4;
@@ -134,7 +134,7 @@
             // 
             this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWeight.Location = new System.Drawing.Point(247, 170);
-            this.txtWeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWeight.Margin = new System.Windows.Forms.Padding(4);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(148, 30);
             this.txtWeight.TabIndex = 6;
@@ -155,7 +155,7 @@
             // 
             this.txtTypeOfFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTypeOfFood.Location = new System.Drawing.Point(247, 247);
-            this.txtTypeOfFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTypeOfFood.Margin = new System.Windows.Forms.Padding(4);
             this.txtTypeOfFood.Name = "txtTypeOfFood";
             this.txtTypeOfFood.Size = new System.Drawing.Size(441, 30);
             this.txtTypeOfFood.TabIndex = 9;
@@ -232,7 +232,7 @@
             this.cboGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGender.FormattingEnabled = true;
             this.cboGender.Location = new System.Drawing.Point(247, 91);
-            this.cboGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboGender.Margin = new System.Windows.Forms.Padding(4);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(208, 33);
             this.cboGender.TabIndex = 3;
@@ -267,7 +267,7 @@
             "10",
             "11"});
             this.cboAgeMonth.Location = new System.Drawing.Point(435, 130);
-            this.cboAgeMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboAgeMonth.Margin = new System.Windows.Forms.Padding(4);
             this.cboAgeMonth.Name = "cboAgeMonth";
             this.cboAgeMonth.Size = new System.Drawing.Size(113, 33);
             this.cboAgeMonth.TabIndex = 5;
@@ -300,7 +300,7 @@
             this.cboSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSpecies.FormattingEnabled = true;
             this.cboSpecies.Location = new System.Drawing.Point(247, 208);
-            this.cboSpecies.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboSpecies.Margin = new System.Windows.Forms.Padding(4);
             this.cboSpecies.Name = "cboSpecies";
             this.cboSpecies.Size = new System.Drawing.Size(273, 33);
             this.cboSpecies.TabIndex = 8;
@@ -311,7 +311,7 @@
             this.cboRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRegion.FormattingEnabled = true;
             this.cboRegion.Location = new System.Drawing.Point(247, 286);
-            this.cboRegion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboRegion.Margin = new System.Windows.Forms.Padding(4);
             this.cboRegion.Name = "cboRegion";
             this.cboRegion.Size = new System.Drawing.Size(273, 33);
             this.cboRegion.TabIndex = 10;
@@ -322,7 +322,7 @@
             this.cboConservationStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboConservationStatus.FormattingEnabled = true;
             this.cboConservationStatus.Location = new System.Drawing.Point(247, 326);
-            this.cboConservationStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboConservationStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cboConservationStatus.Name = "cboConservationStatus";
             this.cboConservationStatus.Size = new System.Drawing.Size(324, 33);
             this.cboConservationStatus.TabIndex = 11;
@@ -333,7 +333,7 @@
             this.cboCageType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCageType.FormattingEnabled = true;
             this.cboCageType.Location = new System.Drawing.Point(247, 368);
-            this.cboCageType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCageType.Margin = new System.Windows.Forms.Padding(4);
             this.cboCageType.Name = "cboCageType";
             this.cboCageType.Size = new System.Drawing.Size(273, 33);
             this.cboCageType.TabIndex = 12;
@@ -344,7 +344,7 @@
             this.cboCareTaker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCareTaker.FormattingEnabled = true;
             this.cboCareTaker.Location = new System.Drawing.Point(247, 407);
-            this.cboCareTaker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCareTaker.Margin = new System.Windows.Forms.Padding(4);
             this.cboCareTaker.Name = "cboCareTaker";
             this.cboCareTaker.Size = new System.Drawing.Size(324, 33);
             this.cboCareTaker.TabIndex = 13;
@@ -353,7 +353,7 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(13, 492);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(209, 43);
             this.btnAdd.TabIndex = 14;
@@ -364,7 +364,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(244, 492);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(209, 43);
             this.btnCancel.TabIndex = 15;
@@ -375,7 +375,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 548);
+            this.ClientSize = new System.Drawing.Size(716, 561);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.cboCareTaker);
@@ -404,7 +404,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAddNewAnimal";
             this.Text = "Add New Animal";
             this.ResumeLayout(false);

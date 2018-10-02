@@ -43,7 +43,9 @@ namespace Assignment__Zoo_Management_System_
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            FormAddNewEmployee frmAddNewEmployee = new FormAddNewEmployee();
+
+            frmAddNewEmployee.ShowDialog();
         }
     }
 }

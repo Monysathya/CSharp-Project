@@ -11,9 +11,11 @@ namespace Assignment__Zoo_Management_System_
     {
         /* Field */
         private string id;
-        private string name;
+        private string fName;
+        private string lName;
         private int age;
         private Gender._Gender gender;
+        private double salary;
         private string workDate;
         private static BindingList<Employee> emp = new BindingList<Employee>();
         /* End of Field */
@@ -24,10 +26,19 @@ namespace Assignment__Zoo_Management_System_
             get { return this.id; }
             set { this.id = value; }
         }
+        public string FirstName
+        {
+            private get { return this.fName; }
+            set { this.fName = value; }
+        }
+        public string LastName
+        {
+            private get { return this.lName; }
+            set { this.lName = value; }
+        }
         public string Name
         {
-            get { return this.name; }
-            set { this.name = value; }
+            get { return string.Format(this.FirstName + " " + this.LastName); }
         }
         public Gender._Gender Gender
         {
@@ -47,6 +58,15 @@ namespace Assignment__Zoo_Management_System_
         {
             get { return this.workDate; }
             set { this.workDate = value; }
+        }
+        public double _Salary
+        {
+            private get { return this.salary; }
+            set { this.salary = value; }
+        }
+        public string Salary
+        {
+            get { return string.Format("{0:C2}", this._Salary); }
         }
         public static BindingList<Employee> Employees
         {

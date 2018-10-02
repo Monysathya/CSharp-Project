@@ -16,28 +16,45 @@ namespace Assignment__Zoo_Management_System_
             Employee.Employees.Add(new CareTaker()
             {
                 ID = "E001",
-                Name = "Sok Dara",
+                FirstName = "Sok",
+                LastName = "Dara",
                 Gender = Gender._Gender.Male,
                 Age = 20,
-                WorkDate = "20 October 2000"
+                WorkDate = "20 October 2000",
+                _Salary = 200
             });
 
             Employee.Employees.Add(new CareTaker()
             {
                 ID = "E002",
-                Name = "Keo Thida",
+                FirstName = "Keo",
+                LastName = "Thida",
                 Gender = Gender._Gender.Female,
                 Age = 25,
-                WorkDate = "21 September 2002"
+                WorkDate = "21 September 2002",
+                _Salary = 220
             });
 
             Employee.Employees.Add(new Security()
             {
                 ID = "E003",
-                Name = "Chan Tola",
+                FirstName = "Chan",
+                LastName = "Tola",
                 Gender = Gender._Gender.Male,
                 Age = 25,
-                WorkDate = "21 December 2004"
+                WorkDate = "21 December 2004",
+                _Salary = 150
+            });
+
+            Employee.Employees.Add(new Security()
+            {
+                ID = "E004",
+                FirstName = "Heng",
+                LastName = "Peaktra",
+                Gender = Gender._Gender.Male,
+                Age = 25,
+                WorkDate = "2 December 2001",
+                _Salary = 150
             });
 
             return Employee.Employees;

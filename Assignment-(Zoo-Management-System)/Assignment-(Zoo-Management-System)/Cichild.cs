@@ -8,14 +8,6 @@ namespace Assignment__Zoo_Management_System_
 {
     class Cichild : Animal
     {
-        public override Conservation.Status ConservationStatus
-        {
-            get
-            {
-                return Conservation.Status.Some_Endangered;
-            }
-        }
-
         public override string Species
         {
             get

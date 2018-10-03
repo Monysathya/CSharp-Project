@@ -62,6 +62,12 @@
     <Compile Include="FormAddNewEmployee.Designer.cs">
       <DependentUpon>FormAddNewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateAnimal.Designer.cs">
+      <DependentUpon>FormUpdateAnimal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddNewEmployee.resx">
       <DependentUpon>FormAddNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateAnimal.resx">
+      <DependentUpon>FormUpdateAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateEmployee.resx">
       <DependentUpon>FormUpdateEmployee.cs</DependentUpon>

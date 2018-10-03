@@ -44,25 +44,7 @@ namespace Assignment__Zoo_Management_System_
 
             /* End of add data to combobox */
 
-            // Set item to be selected in combobox
-            cboPosition.SelectedItem = temp.Position;
-            cboGender.SelectedItem = temp.Gender;
-
-            string[] _workDate = temp.WorkDate.Split(null);
-
-            cboDay.Text = _workDate[0];
-            cboMonth.SelectedItem = _workDate[1];
-            cboYear.Text = _workDate[2];
-
-            // Set data to be show in textbox
-            txtID.Text = temp.ID;
-            txtAge.Text = temp.Age.ToString();
-            txtSalary.Text = temp.Salary;
-
-            string[] fullName = temp.Name.Split(null);
-
-            txtFirstName.Text = fullName[0];
-            txtLastName.Text = fullName[1];
+            SetSelectedData();
 
             // Button event
             btnUpdate.Click += BtnUpdate_Click;
@@ -71,24 +53,7 @@ namespace Assignment__Zoo_Management_System_
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            cboPosition.SelectedItem = temp.Position;
-            cboGender.SelectedItem = temp.Gender;
-
-            string[] _workDate = temp.WorkDate.Split(null);
-
-            cboDay.Text = _workDate[0];
-            cboMonth.SelectedItem = _workDate[1];
-            cboYear.Text = _workDate[2];
-
-            // Set data to be show in textbox
-            txtID.Text = temp.ID;
-            txtAge.Text = temp.Age.ToString();
-            txtSalary.Text = temp.Salary;
-
-            string[] fullName = temp.Name.Split(null);
-
-            txtFirstName.Text = fullName[0];
-            txtLastName.Text = fullName[1];
+            SetSelectedData();
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
@@ -97,28 +62,27 @@ namespace Assignment__Zoo_Management_System_
             bool canUpdate = false;
 
             string workdate = cboDay.Text + " " + cboMonth.Text + " " + cboYear.Text;
-            string[] salary = txtSalary.Text.Split('$');
-
-            var tID = txtID.Text;
-            var tFirstName = MyString.FirstLetterToUpper(txtFirstName.Text);
-            var tLastName = MyString.FirstLetterToUpper(txtLastName.Text);
-            var tGender = (Gender._Gender)cboGender.SelectedItem;
-            var tAge = int.Parse(txtAge.Text);
-            var tSalary = double.Parse(salary[1]);
-            var tWorkDate = workdate;
 
             try
             {
+                var tID = txtID.Text;
+                var tFirstName = MyString.FirstLetterToUpper(txtFirstName.Text);
+                var tLastName = MyString.FirstLetterToUpper(txtLastName.Text);
+                var tGender = (Gender._Gender)cboGender.SelectedItem;
+                var tAge = int.Parse(txtAge.Text);
+                var tSalary = double.Parse(txtSalary.Text);
+                var tWorkDate = workdate;
+
                 foreach (Employee emp in Employee.Employees)
                 {
                     // If user want to update last Care Taker record to Security record
-                    if (temp.Position == "Care Taker" 
+                    if (temp.Position == "Care Taker"
                         && Employee.Employees.Where(x => x.Position == "Care Taker").Count() <= 1
                         && cboPosition.Text != "Care Taker")
                         throw new Exception("Cannot change position of this employee. " +
                             "Please add another Care Taker if you want to change position of this employee");
 
-                    
+
                     canUpdate = true;
 
                     if (cboPosition.Text == "Care Taker")
@@ -143,6 +107,30 @@ namespace Assignment__Zoo_Management_System_
                 if (Modified != null)
                     Modified(this, employee);
             }
+        }
+
+        private void SetSelectedData()
+        {
+            // Set data in combobox
+            cboPosition.SelectedItem = temp.Position;
+            cboGender.SelectedItem = temp.Gender;
+
+            string[] _workDate = temp.WorkDate.Split(null);
+
+            cboDay.Text = _workDate[0];
+            cboMonth.SelectedItem = _workDate[1];
+            cboYear.Text = _workDate[2];
+
+            // Set data in textbox
+            txtID.Text = temp.ID;
+            txtAge.Text = temp.Age.ToString();
+
+            string[] fullName = temp.Name.Split(null);
+            string[] salary = temp.Salary.Split('$');
+
+            txtFirstName.Text = fullName[0];
+            txtLastName.Text = fullName[1];
+            txtSalary.Text = salary[1];
         }
     }
 }

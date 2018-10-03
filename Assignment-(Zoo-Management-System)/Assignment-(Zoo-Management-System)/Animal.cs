@@ -19,6 +19,7 @@ namespace Assignment__Zoo_Management_System_
         private Gender._Gender gender;
         private string typeOfFood;
         private MyRegion.From region;
+        private Conservation.Status conservationStatus;
         private static BindingList<Animal> animals = new BindingList<Animal>();
         /* End of Field */
 
@@ -84,6 +85,11 @@ namespace Assignment__Zoo_Management_System_
             get { return this.region; }
             set { this.region = value; }
         }
+        public Conservation.Status ConservationStatus
+        {
+            get { return this.conservationStatus; }
+            set { this.conservationStatus = value; }
+        }
 
         /* Abstract property */
         public abstract Class.Type _Class
@@ -91,10 +97,6 @@ namespace Assignment__Zoo_Management_System_
             get;
         }
         public abstract string Species
-        {
-            get;
-        }
-        public abstract Conservation.Status ConservationStatus
         {
             get;
         }

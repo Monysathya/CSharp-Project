@@ -8,14 +8,6 @@ namespace Assignment__Zoo_Management_System_
 {
     public class Lion : Animal
     {
-        public override Conservation.Status ConservationStatus
-        {
-            get
-            {
-                return Conservation.Status.Treatened;
-            }
-        }
-
         public override string Species
         {
             get

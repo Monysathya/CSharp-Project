@@ -8,14 +8,6 @@ namespace Assignment__Zoo_Management_System_
 {
     class Tiger : Animal
     {
-        public override Conservation.Status ConservationStatus
-        {
-            get
-            {
-                return Conservation.Status.Endanger;
-            }
-        }
-
         public override string Species
         {
             get

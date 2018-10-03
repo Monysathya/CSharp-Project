@@ -71,7 +71,8 @@ namespace Assignment__Zoo_Management_System_
                 CageType = Cage.Type.Metal,
                 CareTaker = (CareTaker)emps[0],
                 TypeOfFood = "Meat, large-body prey, ..",
-                _Region = MyRegion.From.Afica
+                _Region = MyRegion.From.Afica,
+                ConservationStatus = Conservation.Status.Treatened
             });
 
             Animal.Animals.Add(new Tiger()
@@ -84,7 +85,8 @@ namespace Assignment__Zoo_Management_System_
                 CageType = Cage.Type.Metal,
                 CareTaker = (CareTaker)emps[0],
                 TypeOfFood = "Meat, large-body prey, ..",
-                _Region = MyRegion.From.Asia
+                _Region = MyRegion.From.Asia,
+                ConservationStatus = Conservation.Status.Endanger
             });
 
             Animal.Animals.Add(new Elephant()
@@ -97,7 +99,8 @@ namespace Assignment__Zoo_Management_System_
                 CageType = Cage.Type.Wood,
                 CareTaker = (CareTaker)emps[1],
                 TypeOfFood = "Vegetation, grasses, small plants, bushes, fruit, ..",
-                _Region = MyRegion.From.Asia
+                _Region = MyRegion.From.Asia,
+                ConservationStatus = Conservation.Status.Endanger
             });
 
             Animal.Animals.Add(new Penguin()
@@ -110,7 +113,8 @@ namespace Assignment__Zoo_Management_System_
                 CageType = Cage.Type.Free_Lane,
                 CareTaker = (CareTaker)emps[1],
                 TypeOfFood = "Krill (a shrimp-like crustacean in the Family Euphausiidae), squids, and fishes.",
-                _Region = MyRegion.From.Antarctica
+                _Region = MyRegion.From.Antarctica,
+                ConservationStatus = Conservation.Status.Endanger
             });
 
             Animal.Animals.Add(new Peocock()
@@ -123,7 +127,8 @@ namespace Assignment__Zoo_Management_System_
                 CageType = Cage.Type.Wood,
                 CareTaker = (CareTaker)emps[0],
                 TypeOfFood = "Seed, insects, fruit, ..",
-                _Region = MyRegion.From.Asia
+                _Region = MyRegion.From.Asia,
+                ConservationStatus = Conservation.Status.Some_Endangered
             });
 
             Animal.Animals.Add(new Cichild()
@@ -136,7 +141,8 @@ namespace Assignment__Zoo_Management_System_
                 CageType = Cage.Type.Aqurium,
                 CareTaker = (CareTaker)emps[0],
                 TypeOfFood = "Small-fish, snail, some plant",
-                _Region = MyRegion.From.Afica
+                _Region = MyRegion.From.Afica,
+                ConservationStatus = Conservation.Status.Stable
             });
         }     
     }

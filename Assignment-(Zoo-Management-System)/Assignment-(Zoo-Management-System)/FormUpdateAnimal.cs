@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace Assignment__Zoo_Management_System_
 {
-    public partial class FormAddNewAnimal : Form
+    public partial class FormUpdateAnimal : Form
     {
-        public delegate void CreateHandler(object sender, Animal animal);
-        public event CreateHandler Create = null;
+        private Animal temp = null;
 
-        public FormAddNewAnimal()
+        public delegate void ModifyHandler(object sender, Animal animal);
+        public event ModifyHandler Modified = null;
+
+        public FormUpdateAnimal(Animal a)
         {
             InitializeComponent();
 
-            // Set datasource to combobox
+            temp = a;
+
+            /* Add data to combobox */
             cboGender.DataSource = Enum.GetValues(typeof(Gender._Gender));
             cboRegion.DataSource = Enum.GetValues(typeof(MyRegion.From));
             cboConservationStatus.DataSource = Enum.GetValues(typeof(Conservation.Status));
@@ -40,44 +44,30 @@ namespace Assignment__Zoo_Management_System_
                     cboCareTaker.Items.Add(e.IDAndName);
             }
 
-            // Set selected index of combobox to 0 (first item)
-            cboCareTaker.SelectedIndex = 0;
-            cboAgeMonth.SelectedIndex = 0;
-            cboSpecies.SelectedIndex = 0;
+            SetSelectedData();
 
-            // Button event click
-            btnAdd.Click += BtnAdd_Click;
+            // Button event
+            btnUpdate.Click += BtnUpdate_Click;
             btnCancel.Click += BtnCancel_Click;
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            // Clear all text box and set combobox selected item to first item
-            foreach (Control C in this.Controls)
-            {
-                if (C is TextBox)
-                {
-                    C.Text = "";
-                }
-                if (C is ComboBox)
-                {
-                    (C as ComboBox).SelectedIndex = 0;
-                }
-            }
+            SetSelectedData();
         }
 
-        private void BtnAdd_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             Employee careTaker = new CareTaker();
             Animal animal = null;
 
-            bool canCreate = false;
+            bool canUpdate = false;
 
             try
             {
                 // Split IDAndName property and take only ID of Care Taker
                 string IDAndName = cboCareTaker.Text;
-                string[] caretakerID = IDAndName.Split(null);  
+                string[] caretakerID = IDAndName.Split(null);
 
                 foreach (Employee t in Employee.Employees)
                 {
@@ -97,15 +87,9 @@ namespace Assignment__Zoo_Management_System_
                 var tRegion = (MyRegion.From)cboRegion.SelectedItem;
                 var tCageType = (Cage.Type)cboCageType.SelectedItem;
                 var tCareTaker = (CareTaker)careTaker;
+                var tConservationStatus = (Conservation.Status)cboConservationStatus.SelectedIndex;
 
-                // If ID already have
-                foreach (Animal aml in Animal.Animals)
-                {
-                    if (aml.ID.Equals(tID))
-                        throw new Exception(string.Format("Duplicate ID: {0}", tID));
-                }
-
-                canCreate = true;
+                canUpdate = true;
 
                 if (cboSpecies.Text == "Lion")
                     animal = new Lion();
@@ -131,17 +115,41 @@ namespace Assignment__Zoo_Management_System_
                 animal._Age = tAge;
                 animal._Weight = tWeight;
                 animal.TypeOfFood = tTypeOfFood;
+                animal.ConservationStatus = tConservationStatus;
                 animal._Region = tRegion;
                 animal.CageType = tCageType;
                 animal.CareTaker = tCareTaker;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
-            if (canCreate)
+            if (canUpdate)
             {
-                if (Create != null)
-                    Create(this, animal);
+                if (Modified != null)
+                    Modified(this, animal);
             }
+        }
+
+        private void SetSelectedData()
+        {
+            // Set selected item in combobox
+            cboCareTaker.SelectedItem = temp.CareTaker.IDAndName;
+            cboSpecies.SelectedItem = temp.Species;
+            cboCageType.SelectedItem = temp.CageType;
+            cboConservationStatus.SelectedItem = temp.ConservationStatus;
+            cboGender.SelectedItem = temp.Gender;
+            cboRegion.SelectedItem = temp._Region;
+
+            string[] ageMonth = temp.Age.Split(null);
+            string[] weight = temp.Weight.Split(null);
+
+            cboAgeMonth.SelectedItem = ageMonth[3];
+
+            // Set data to textbox
+            txtID.Text = temp.ID;
+            txtName.Text = temp.Name;
+            txtAgeYear.Text = ageMonth[0];
+            txtWeight.Text = weight[0];
+            txtTypeOfFood.Text = temp.TypeOfFood;
         }
     }
 }

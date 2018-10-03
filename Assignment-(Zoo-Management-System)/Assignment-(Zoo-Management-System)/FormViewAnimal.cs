@@ -29,6 +29,29 @@ namespace Assignment__Zoo_Management_System_
 
             // Event button
             btnAdd.Click += BtnAdd_Click;
+            btnDelete.Click += BtnDelete_Click;
+            btnUpdate.Click += BtnUpdate_Click;
+        }
+
+        private void BtnUpdate_Click(object sender, System.EventArgs e)
+        {
+            int index = dgvViewAllAnimals.CurrentRow.Index;
+
+            FormUpdateAnimal frmUpdateAnimal = new FormUpdateAnimal(Animal.Animals[index]);
+
+            frmUpdateAnimal.Modified += FrmUpdateAnimal_Modified;
+            frmUpdateAnimal.ShowDialog();
+        }
+
+        private void FrmUpdateAnimal_Modified(object sender, Animal animal)
+        {
+            Animal.Animals[dgvViewAllAnimals.CurrentRow.Index] = animal;
+        }
+
+        private void BtnDelete_Click(object sender, System.EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete this record?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Animal.Animals.RemoveAt(dgvViewAllAnimals.CurrentRow.Index);
         }
 
         private void BtnAdd_Click(object sender, System.EventArgs e)

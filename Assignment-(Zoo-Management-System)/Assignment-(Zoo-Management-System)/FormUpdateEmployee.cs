@@ -73,32 +73,29 @@ namespace Assignment__Zoo_Management_System_
                 var tSalary = double.Parse(txtSalary.Text);
                 var tWorkDate = workdate;
 
-                foreach (Employee emp in Employee.Employees)
-                {
-                    // If user want to update last Care Taker record to Security record
-                    if (temp.Position == "Care Taker"
-                        && Employee.Employees.Where(x => x.Position == "Care Taker").Count() <= 1
-                        && cboPosition.Text != "Care Taker")
-                        throw new Exception("Cannot change position of this employee. " +
-                            "Please add another Care Taker if you want to change position of this employee");
+                // If user want to update last Care Taker record to Security record
+                if (temp.Position == "Care Taker"
+                    && Employee.Employees.Where(x => x.Position == "Care Taker").Count() <= 1
+                    && cboPosition.Text != "Care Taker")
+                    throw new Exception("Cannot change position of this employee. " +
+                        "Please add another Care Taker if you want to change position of this employee");
 
 
-                    canUpdate = true;
+                canUpdate = true;
 
-                    if (cboPosition.Text == "Care Taker")
-                        employee = new CareTaker();
+                if (cboPosition.Text == "Care Taker")
+                    employee = new CareTaker();
 
-                    if (cboPosition.Text == "Security")
-                        employee = new Security();
+                if (cboPosition.Text == "Security")
+                    employee = new Security();
 
-                    employee.ID = tID;
-                    employee.FirstName = tFirstName;
-                    employee.LastName = tLastName;
-                    employee.Gender = tGender;
-                    employee.Age = tAge;
-                    employee._Salary = tSalary;
-                    employee.WorkDate = tWorkDate;
-                }
+                employee.ID = tID;
+                employee.FirstName = tFirstName;
+                employee.LastName = tLastName;
+                employee.Gender = tGender;
+                employee.Age = tAge;
+                employee._Salary = tSalary;
+                employee.WorkDate = tWorkDate;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 

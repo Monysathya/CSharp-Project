@@ -15,5 +15,10 @@ namespace Assignment__Zoo_Management_System_
                 return "Care Taker";
             }
         }
+
+        public static explicit operator CareTaker(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -28,6 +28,22 @@ namespace Assignment__Zoo_Management_System_
             btnAdd.Click += BtnAdd_Click;
             btnSort.Click += BtnSort_Click;
             btnDelete.Click += BtnDelete_Click;
+            btnUpdate.Click += BtnUpdate_Click;
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            int index = dgvViewAllEmployee.CurrentRow.Index;
+
+            FormUpdateEmployee frmUpdateEmployee = new FormUpdateEmployee(Employee.Employees[index]);
+
+            frmUpdateEmployee.Modified += FrmUpdateEmployee_Modified;
+            frmUpdateEmployee.ShowDialog();
+        }
+
+        private void FrmUpdateEmployee_Modified(object sender, Employee employee)
+        {
+            Employee.Employees[dgvViewAllEmployee.CurrentRow.Index] = employee;
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)

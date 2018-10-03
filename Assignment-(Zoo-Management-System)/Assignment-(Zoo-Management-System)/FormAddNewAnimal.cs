@@ -71,10 +71,13 @@ namespace Assignment__Zoo_Management_System_
             Employee careTaker = new CareTaker();
             Animal animal = null;
 
+            bool canCreate = false;
+
             try
             {
+                // Split IDAndName property and take only ID of Care Taker
                 string IDAndName = cboCareTaker.Text;
-                string[] caretakerID = IDAndName.Split(null);  // Split IDAndName property and taker only ID
+                string[] caretakerID = IDAndName.Split(null);  
 
                 foreach (Employee t in Employee.Employees)
                 {
@@ -95,106 +98,49 @@ namespace Assignment__Zoo_Management_System_
                 var tCageType = (Cage.Type)cboCageType.SelectedItem;
                 var tCareTaker = (CareTaker)careTaker;
 
-                if (cboSpecies.Text == "Lion")
+                foreach (Animal aml in Animal.Animals)
                 {
-                    animal = new Lion()
-                    {
-                        ID = tID,
-                        Name = tName,
-                        Gender = tGender,
-                        _Age = tAge,
-                        _Weight = tWeight,
-                        TypeOfFood = tTypeOfFood,
-                        _Region = tRegion,
-                        CageType = tCageType,
-                        CareTaker = tCareTaker
-                    };
+                    if (aml.ID.Equals(tID))
+                        throw new Exception(string.Format("Duplicate ID: {0}", tID));
                 }
+
+                canCreate = true;
+
+                if (cboSpecies.Text == "Lion")
+                    animal = new Lion();
 
                 if (cboSpecies.Text == "Tiger")
-                {
-                    animal = new Tiger()
-                    {
-                        ID = tID,
-                        Name = tName,
-                        Gender = tGender,
-                        _Age = tAge,
-                        _Weight = tWeight,
-                        TypeOfFood = tTypeOfFood,
-                        _Region = tRegion,
-                        CageType = tCageType,
-                        CareTaker = tCareTaker
-                    };
-                }
+                    animal = new Tiger();
 
                 if (cboSpecies.Text == "Elephant")
-                {
-                    animal = new Elephant()
-                    {
-                        ID = tID,
-                        Name = tName,
-                        Gender = tGender,
-                        _Age = tAge,
-                        _Weight = tWeight,
-                        TypeOfFood = tTypeOfFood,
-                        _Region = tRegion,
-                        CageType = tCageType,
-                        CareTaker = tCareTaker
-                    };
-                }
+                    animal = new Elephant();
 
                 if (cboSpecies.Text == "Penguin")
-                {
-                    animal = new Penguin()
-                    {
-                        ID = tID,
-                        Name = tName,
-                        Gender = tGender,
-                        _Age = tAge,
-                        _Weight = tWeight,
-                        TypeOfFood = tTypeOfFood,
-                        _Region = tRegion,
-                        CageType = tCageType,
-                        CareTaker = tCareTaker
-                    };
-                }
+                    animal = new Penguin();
 
                 if (cboSpecies.Text == "Peocock")
-                {
-                    animal = new Peocock()
-                    {
-                        ID = tID,
-                        Name = tName,
-                        Gender = tGender,
-                        _Age = tAge,
-                        _Weight = tWeight,
-                        TypeOfFood = tTypeOfFood,
-                        _Region = tRegion,
-                        CageType = tCageType,
-                        CareTaker = tCareTaker
-                    };
-                }
+                    animal = new Peocock();
 
                 if (cboSpecies.Text == "Cichild")
-                {
-                    animal = new Cichild()
-                    {
-                        ID = tID,
-                        Name = tName,
-                        Gender = tGender,
-                        _Age = tAge,
-                        _Weight = tWeight,
-                        TypeOfFood = tTypeOfFood,
-                        _Region = tRegion,
-                        CageType = tCageType,
-                        CareTaker = tCareTaker
-                    };
-                }
+                    animal = new Cichild();
+
+                animal.ID = tID;
+                animal.Name = tName;
+                animal.Gender = tGender;
+                animal._Age = tAge;
+                animal._Weight = tWeight;
+                animal.TypeOfFood = tTypeOfFood;
+                animal._Region = tRegion;
+                animal.CageType = tCageType;
+                animal.CareTaker = tCareTaker;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
-            if (Create != null)
-                Create(this, animal);
+            if (canCreate)
+            {
+                if (Create != null)
+                    Create(this, animal);
+            }
         }
     }
 }

@@ -50,8 +50,25 @@ namespace Assignment__Zoo_Management_System_
 
         private void BtnDelete_Click(object sender, System.EventArgs e)
         {
+            int index = dgvViewAllAnimals.CurrentRow.Index;
+
             if (MessageBox.Show("Do you want to delete this record?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                Animal.Animals.RemoveAt(dgvViewAllAnimals.CurrentRow.Index);
+            {
+                // Remove animal from list of care taker
+                foreach (Employee c in Employee.Employees)
+                {
+                    if (c.ID == Animal.Animals[index].CareTakerID)
+                    {
+                        (c as CareTaker).ListAnimals.Remove(Animal.Animals[index]);
+
+                        break;
+                    }
+                }
+
+                Animal.Animals.RemoveAt(index);
+
+                MessageBox.Show("Record Deleted");              
+            }
         }
 
         private void BtnAdd_Click(object sender, System.EventArgs e)

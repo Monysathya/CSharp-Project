@@ -80,6 +80,12 @@ namespace Assignment__Zoo_Management_System_
                     throw new Exception("Cannot change position of this employee. " +
                         "Please add another Care Taker if you want to change position of this employee");
 
+                // If user want to update Care Taker record that have up to 1 animal in the list
+                if (temp.Position == "Care Taker"
+                    && (temp as CareTaker).ListAnimals.Count() > 0
+                    && cboPosition.Text != "Care Taker")
+                    throw new Exception(string.Format("Cannot change position of this care taker. " +
+                        "This care taker is currently have {0} animal to take care.", (temp as CareTaker).ListAnimals.Count()));
 
                 canUpdate = true;
 
@@ -103,6 +109,8 @@ namespace Assignment__Zoo_Management_System_
             {
                 if (Modified != null)
                     Modified(this, employee);
+
+                MessageBox.Show("Record Updated");
             }
         }
 

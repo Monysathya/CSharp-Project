@@ -10,6 +10,9 @@ namespace Assignment__Zoo_Management_System_
     {
         public static string FirstLetterToUpper(string s)
         {
+            if (s == null)
+                throw new Exception();
+
             return s.First().ToString().ToUpper() + s.Substring(1);
         }
     }

@@ -66,42 +66,49 @@ namespace Assignment__Zoo_Management_System_
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             Employee employee = null;
+            bool canCreate = false;
 
             string workdate = cboDay.Text + " " + cboMonth.Text + " " + cboYear.Text;
 
             try
             {
+                var tID = MyString.FirstLetterToUpper(txtID.Text);
+                var tFirstName = MyString.FirstLetterToUpper(txtFirstName.Text);
+                var tLastName = MyString.FirstLetterToUpper(txtLastName.Text);
+                var tGender = (Gender._Gender)cboGender.SelectedItem;
+                var tAge = int.Parse(txtAge.Text);
+                var tSalary = double.Parse(txtSalary.Text);
+                var tWorkDate = workdate;
+
+                foreach (Employee emp in Employee.Employees)
+                {
+                    if (emp.ID.Equals(tID))
+                        throw new Exception(string.Format("Duplicate ID: {0}", tID));
+                }
+
+                canCreate = true;
+
                 if (cboPosition.Text == "Care Taker")
-                {
-                    employee = new CareTaker()
-                    {
-                        ID = MyString.FirstLetterToUpper(txtID.Text),
-                        FirstName = MyString.FirstLetterToUpper(txtFirstName.Text),
-                        LastName = MyString.FirstLetterToUpper(txtLastName.Text),
-                        Gender = (Gender._Gender)cboGender.SelectedItem,
-                        Age = int.Parse(txtAge.Text),
-                        _Salary = double.Parse(txtSalary.Text),
-                        WorkDate = workdate
-                    };
-                }
+                    employee = new CareTaker();
+
                 if (cboPosition.Text == "Security")
-                {
-                    employee = new Security()
-                    {
-                        ID = MyString.FirstLetterToUpper(txtID.Text),
-                        FirstName = MyString.FirstLetterToUpper(txtFirstName.Text),
-                        LastName = MyString.FirstLetterToUpper(txtLastName.Text),
-                        Gender = (Gender._Gender)cboGender.SelectedItem,
-                        Age = int.Parse(txtAge.Text),
-                        _Salary = double.Parse(txtSalary.Text),
-                        WorkDate = workdate
-                    };
-                }
+                    employee = new Security();
+
+                employee.ID = tID;
+                employee.FirstName = tFirstName;
+                employee.LastName = tLastName;
+                employee.Gender = tGender;
+                employee.Age = tAge;
+                employee._Salary = tSalary;
+                employee.WorkDate = tWorkDate;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
-            if (Create != null)
-                Create(this, employee);
+            if (canCreate)
+            {
+                if (Create != null)
+                    Create(this, employee);
+            }
         }
     }
 }

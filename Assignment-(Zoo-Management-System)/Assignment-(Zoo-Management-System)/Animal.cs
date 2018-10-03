@@ -65,7 +65,13 @@ namespace Assignment__Zoo_Management_System_
         public CareTaker CareTaker
         {
             get { return this.careTaker; }
-            set { this.careTaker = value; }
+            set
+            {
+                this.careTaker = value;
+
+                // Add animal to list animal of care taker object
+                this.CareTaker.ListAnimals.Add(this);
+            }
         }
         public string TypeOfFood
         {

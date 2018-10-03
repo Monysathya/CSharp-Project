@@ -13,6 +13,7 @@ namespace Assignment__Zoo_Management_System_
     public partial class FormViewEmployee : Form
     {
         private BindingSource bs = new BindingSource();
+
         public FormViewEmployee()
         {
             InitializeComponent();
@@ -48,13 +49,22 @@ namespace Assignment__Zoo_Management_System_
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            int index = dgvViewAllEmployee.CurrentRow.Index;
             if (MessageBox.Show("Do you want to delete this record?", "Delete?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // If user want to delete last record of Care Taker
                 if (bs.Current is CareTaker && Employee.Employees.Where(x => x.Position == "Care Taker").Count() <= 1)
                     MessageBox.Show("You cannot delete this record. Please add another Care Taker if you want to delete this record.", "Cannot delete");
+
+                // If current care taker is currently have animal to take care
+                else if (bs.Current is CareTaker && (bs.Current as CareTaker).ListAnimals.Count > 0)
+                    MessageBox.Show(string.Format("This Care Taker is currently have {0} animal to taker care.", (bs.Current as CareTaker).ListAnimals.Count()));
+
                 else
-                    Employee.Employees.RemoveAt(dgvViewAllEmployee.CurrentRow.Index);
+                {
+                    Employee.Employees.RemoveAt(index);
+                    MessageBox.Show("Record Deleted");
+                }
             }
         }
 

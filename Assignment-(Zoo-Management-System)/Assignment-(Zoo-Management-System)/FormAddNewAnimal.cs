@@ -53,17 +53,7 @@ namespace Assignment__Zoo_Management_System_
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             // Clear all text box and set combobox selected item to first item
-            foreach (Control C in this.Controls)
-            {
-                if (C is TextBox)
-                {
-                    C.Text = "";
-                }
-                if (C is ComboBox)
-                {
-                    (C as ComboBox).SelectedIndex = 0;
-                }
-            }
+            ResetControl();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -141,6 +131,25 @@ namespace Assignment__Zoo_Management_System_
             {
                 if (Create != null)
                     Create(this, animal);
+
+                MessageBox.Show("Record Added");
+
+                ResetControl();
+            }
+        }
+
+        private void ResetControl()
+        {
+            foreach (Control C in this.Controls)
+            {
+                if (C is TextBox)
+                {
+                    C.Text = "";
+                }
+                if (C is ComboBox)
+                {
+                    (C as ComboBox).SelectedIndex = 0;
+                }
             }
         }
     }

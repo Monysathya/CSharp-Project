@@ -126,6 +126,8 @@ namespace Assignment__Zoo_Management_System_
             {
                 if (Modified != null)
                     Modified(this, animal);
+
+                MessageBox.Show("Record Updated");
             }
         }
 

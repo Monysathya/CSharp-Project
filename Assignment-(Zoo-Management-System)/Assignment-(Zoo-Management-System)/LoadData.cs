@@ -144,6 +144,48 @@ namespace Assignment__Zoo_Management_System_
                 _Region = MyRegion.From.Afica,
                 ConservationStatus = Conservation.Status.Stable
             });
+
+            Animal.Animals.Add(new Ostrich()
+            {
+                ID = "A007",
+                Name = "Lina",
+                Gender = Gender._Gender.Female,
+                _Age = new Age() { Year = 5, Month = 2 },
+                _Weight = 26,
+                CageType = Cage.Type.Wood,
+                CareTaker = (CareTaker)emps[1],
+                TypeOfFood = "Seed, Plant, ..",
+                _Region = MyRegion.From.Australia,
+                ConservationStatus = Conservation.Status.Stable
+            });
+
+            Animal.Animals.Add(new Shark()
+            {
+                ID = "A008",
+                Name = "Nemo",
+                Gender = Gender._Gender.Male,
+                _Age = new Age() { Year = 12, Month = 6 },
+                _Weight = 240,
+                CageType = Cage.Type.Aqurium,
+                CareTaker = (CareTaker)emps[1],
+                TypeOfFood = "Meat, small prey, ..",
+                _Region = MyRegion.From.Europe,
+                ConservationStatus = Conservation.Status.Treatened
+            });
+
+            Animal.Animals.Add(new Ray()
+            {
+                ID = "A009",
+                Name = "Carl",
+                Gender = Gender._Gender.Male,
+                _Age = new Age() { Year = 6, Month = 9 },
+                _Weight = 150,
+                CageType = Cage.Type.Aqurium,
+                CareTaker = (CareTaker)emps[1],
+                TypeOfFood = "Small fish, plant, ..",
+                _Region = MyRegion.From.South_America,
+                ConservationStatus = Conservation.Status.Some_Treatened
+            });
         }     
     }
 }
